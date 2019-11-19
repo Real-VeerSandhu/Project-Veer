@@ -9,7 +9,7 @@ import { MaterialModule } from '../material/material.module';
   declarations: [ToolbarComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
   ],
   entryComponents:[ToolbarComponent],
   exports: [

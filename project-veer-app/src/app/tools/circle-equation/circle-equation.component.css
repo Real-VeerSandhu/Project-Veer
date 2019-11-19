@@ -1,0 +1,77 @@
+#circle {
+    padding: 20px;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    border-width: 3px;
+    border-style: solid;
+}
+.origin-eq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.circle-container {
+    display: grid;
+    width: 500px;
+    padding: 30px;
+}
+#r {
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 13px;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 200px;
+
+
+
+}
+.origin {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 100px;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 200px;
+    padding-bottom: 10px;
+    font-family: Space Mono, monospace;
+}
+
+.radius {
+    width: 15%;
+}
+
+.draw-point {
+    margin-left: 20px;
+}
+
+.orgin-equation {
+    grid-row: 2;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.grid {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(234, 0, 255);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-self: center;
+}
+
+.grid-container {
+    display: grid;
+    justify-items: center;
+    align-items: flex-start;
+}
+.sub-eq-container {
+    size: x-large;
+}
+.equation-card {
+    max-width: 400px;
+    margin: 40px;
+}
