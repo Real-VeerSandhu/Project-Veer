@@ -8,7 +8,8 @@
 }
 .origin-eq-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat( auto-fill, minmax(400px, 1fr) );
+    /* background-color: aqua; */
 }
 .circle-container {
     display: grid;
@@ -61,17 +62,20 @@
     margin-top: 30px;
     margin-bottom: 30px;
     align-self: center;
+    width: 75%;
 }
 
 .grid-container {
     display: grid;
     justify-items: center;
     align-items: flex-start;
+    /* background-color: blueviolet; */
 }
 .sub-eq-container {
     size: x-large;
 }
 .equation-card {
     max-width: 400px;
+    max-height: 200px;
     margin: 40px;
 }

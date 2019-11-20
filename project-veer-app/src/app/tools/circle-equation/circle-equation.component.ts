@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { mixinColor } from '@angular/material';
-import { randomBytes } from 'crypto';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+
 
 @Component({
   selector: 'app-circle-equation',
