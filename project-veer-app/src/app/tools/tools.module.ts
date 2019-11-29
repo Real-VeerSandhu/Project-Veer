@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComponentModule } from '../components/component.module';
 import { MaterialModule } from '../material/material.module';
 import { CircleEquationComponent } from './circle-equation/circle-equation.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes =  [
@@ -18,7 +19,8 @@ const routes: Routes =  [
     CommonModule,
     RouterModule.forChild(routes),
     ComponentModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class ToolsModule { }

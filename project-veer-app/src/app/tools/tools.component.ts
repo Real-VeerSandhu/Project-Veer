@@ -15,6 +15,9 @@ export class ToolsComponent implements OnInit {
   }
 
   goToCircleEquation() {
-    this.router.navigate(['/tools/circle-equation'])
+    this.router.navigate(['/tools/circle-equation']);
+  }
+  goToScienceTools() {
+    console.log('To Be Done');
   }
 }

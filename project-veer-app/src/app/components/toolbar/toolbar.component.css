@@ -1,8 +1,10 @@
 .navbar {
-    justify-content: space-between;
-    width: 100%
+    /* justify-content: space-between; */
+    width: 100%;
+
 }
 
 span {
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
 }
+
