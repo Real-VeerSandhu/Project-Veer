@@ -6,15 +6,19 @@ import { ComponentModule } from '../components/component.module';
 import { MaterialModule } from '../material/material.module';
 import { CircleEquationComponent } from './circle-equation/circle-equation.component';
 import { FormsModule } from '@angular/forms';
+import { PeriodicTableComponent } from './periodic-table/periodic-table.component';
+import { ElementDetailsComponent } from './element-details/element-details.component';
 
 
 const routes: Routes =  [
   { path: '', component: ToolsComponent },
-  { path: 'circle-equation', component: CircleEquationComponent}
+  { path: 'circle-equation', component: CircleEquationComponent},
+  { path: 'periodic-table', component: PeriodicTableComponent}
 ]
 
 @NgModule({
-  declarations: [ToolsComponent, CircleEquationComponent],
+  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent],
+  entryComponents: [ElementDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -1,0 +1,11 @@
+<div class="main-container">
+    <mat-list>
+        <h1 mat-subheader>{{periodicTable.elements[data.index].name}} ({{periodicTable.elements[data.index].symbol}}): {{periodicTable.elements[data.index].phase}}</h1>
+        <mat-list-item>Atomic Number: {{periodicTable.elements[data.index].number}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Atomic Mass: {{periodicTable.elements[data.index].atomic_mass}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <p>{{periodicTable.elements[data.index].summary}}</p>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>
