@@ -17,8 +17,13 @@ export class ToolsComponent implements OnInit {
   goToCircleEquation() {
     this.router.navigate(['/tools/circle-equation']);
   }
-  goToScienceTools() {
+  goToPTableTools() {
     this.router.navigate(['/tools/periodic-table']);
-    console.log('To Be Done');
+  }
+  goToLinerSystemTool() {
+    this.router.navigate(['/tools/linear-system']);
+  }
+  goToParabolaTool() {
+    this.router.navigate(['/tools/parabola']);
   }
 }

@@ -8,16 +8,23 @@ import { CircleEquationComponent } from './circle-equation/circle-equation.compo
 import { FormsModule } from '@angular/forms';
 import { PeriodicTableComponent } from './periodic-table/periodic-table.component';
 import { ElementDetailsComponent } from './element-details/element-details.component';
+import { PeriodicTableService } from 'src/services/periodic-table.service';
+import { FirestoreService } from 'src/services/firestore.service';
+import { LinearSystemComponent } from './linear-system/linear-system.component';
+import { GridComponent } from './grid/grid.component';
+import { QuadraticComponent } from './quadratic/quadratic.component';
 
 
 const routes: Routes =  [
   { path: '', component: ToolsComponent },
   { path: 'circle-equation', component: CircleEquationComponent},
-  { path: 'periodic-table', component: PeriodicTableComponent}
+  { path: 'periodic-table', component: PeriodicTableComponent},
+  { path: 'linear-system', component: LinearSystemComponent },
+  { path: 'parabola', component: QuadraticComponent }
 ]
 
 @NgModule({
-  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent],
+  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent, GridComponent, QuadraticComponent],
   entryComponents: [ElementDetailsComponent],
   imports: [
     CommonModule,
@@ -25,6 +32,10 @@ const routes: Routes =  [
     ComponentModule,
     MaterialModule,
     FormsModule
+  ],
+  providers: [
+    PeriodicTableService,
+    FirestoreService
   ]
 })
 export class ToolsModule { }

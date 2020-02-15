@@ -1,11 +1,13 @@
-<div class="main-container">
+<div class="main-container" *ngIf="!!data">
     <mat-list>
-        <h1 mat-subheader>{{periodicTable.elements[data.index].name}} ({{periodicTable.elements[data.index].symbol}}): {{periodicTable.elements[data.index].phase}}</h1>
-        <mat-list-item>Atomic Number: {{periodicTable.elements[data.index].number}}</mat-list-item>
+        <h1 mat-subheader>{{data.name}} 
+            ({{data.symbol}}): 
+            {{data.phase}}</h1>
+        <mat-list-item>Atomic Number: {{data.number}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>Atomic Mass: {{periodicTable.elements[data.index].atomic_mass}}</mat-list-item>
+        <mat-list-item>Atomic Mass: {{data.atomicMass}}</mat-list-item>
         <mat-divider></mat-divider>
-        <p>{{periodicTable.elements[data.index].summary}}</p>
+        <p>{{data.summary}}</p>
         <mat-divider></mat-divider>
     </mat-list>
 </div>

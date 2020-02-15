@@ -1,6 +1,48 @@
 <app-toolbar></app-toolbar>
-<br>
+<!-- <br>
 <h2 class="title">Welcome to Home!</h2>
 <br>
-<hr>
+<hr> -->
+<mat-card id="header">
+  <mat-card-header id="title">
+    <h1 id="title-text">Welcome to Project Veer</h1>
+  </mat-card-header>
+</mat-card>
+<div class="main-container">
+  <div class="test">
+    <mat-card class="information-card">
+      <mat-card-header class="information-header">
+        <div mat-card></div>
+      </mat-card-header>
+      <img src="../../assets/Images/project-veer-def.PNG" width="100%">
+      <mat-card-content>
+        <p>
+          Examples include: <button mat-raised-button color="secondary" class="button-link" (click)="goToPTableTool()">Periodic
+            Table</button>
+        <button mat-raised-button color="secondary" class="button-link" (click)="goToCircleEquation()">Circle Equation</button>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
+  <mat-card class="veer-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Developer</mat-card-title>
+      <mat-card-subtitle>Veer Sandhu</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image
+      src="https://www.veracode.com/sites/default/files/styles/blog_post_resize_960/public/developer-guide-blog-2.png?itok=uyhlUkTW"
+      >
+    <mat-card-content>
+      <p>
+        The Veer Sandhu is a Canadian human being attending highschool through the International Baccalaureate program.
+        This somewhat tall human is versatile in STEM subjects and is close enough to a guitarist.
+        He created this application using the Angular Framework and Material Design.
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<!-- https://cdn.britannica.com/18/197118-131-00A7D6AF/Computer-Code-Binary-Internet-Password-Data-Technology.jpg -->

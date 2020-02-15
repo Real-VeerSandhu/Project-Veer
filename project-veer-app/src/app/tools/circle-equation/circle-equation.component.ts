@@ -27,7 +27,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
 
 
   @Output()
-  selectedTabChange: EventEmitter<MatTabChangeEvent>
+  selectedTabChange: EventEmitter<MatTabChangeEvent>;
 
   private cx: CanvasRenderingContext2D;
 
@@ -51,7 +51,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
 
     this.cx.lineWidth = 3;
     this.cx.lineCap = 'square';
-    this.cx.strokeStyle = 'rgb(234, 0, 255)';
+    this.cx.strokeStyle = 'grey';
     this.drawYGrid();
     this.drawXGrid();
     this.cx.beginPath();
@@ -69,7 +69,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
 
   createGeo() {
     this.cx.clearRect(0, 0, this.width, this.height);
-    this.cx.strokeStyle = 'rgb(234, 0, 255)';
+    this.cx.strokeStyle = 'grey';
     this.drawYGrid();
     this.drawXGrid();
     this.cx.strokeStyle = 'black';
@@ -107,11 +107,11 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
     }
   }
   radiusValue(event: KeyboardEvent) { // with type info
-    this.radius = +(event.target as HTMLInputElement).value
+    this.radius = +(event.target as HTMLInputElement).value;
     if (this.radius > 10) {
-      this.radius = 10
+      this.radius = 10;
     }
-    this.radius = this.radius * 30
+    this.radius = this.radius * 30;
   }
   drawCircle() {
     this.cx.beginPath();
@@ -144,7 +144,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
 
     this.cx.beginPath();
     this.cx.arc(this.randomPoint * 30 + 300 + this.h, this.otherPoint * 30 + 300 + this.k, 6, 0, Math.PI * 2, true);
-    this.cx.fillStyle = 'indigo';
+    this.cx.fillStyle = 'rgb(234, 0, 255)';
     this.cx.fill();
     this.cx.closePath();
   }

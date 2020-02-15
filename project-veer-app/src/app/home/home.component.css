@@ -1,3 +1,49 @@
-.title {
-    text-align: center;
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100vw;
 }
+
+.veer-card {
+    max-width: 400px;
+    margin: 2%
+  }
+  
+.example-header-image {
+  background-image: url('https://m.media-amazon.com/images/S/aplus-media/vc/ad57d8ac-2e41-4ab9-9547-e1448b1bb23c.__CR0,0,1080,1080_PT0_SX300_V1___.jpg');
+  background-size: cover;
+  border-width: 2px;
+  border-style: bold;
+  border-color: black;
+}
+
+.information-card {
+  max-width: 100%;
+  margin: 2%;
+  padding: 2%;
+  grid-column: 1;
+  max-height: 100%;
+}
+
+.information-header {
+  align-content: center;
+}
+
+.button-link {
+  padding: 0%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 1%;
+}
+
+#title {
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+#header {
+  margin: 10px;
+}
+

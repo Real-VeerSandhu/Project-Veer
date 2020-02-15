@@ -1,10 +1,14 @@
 .navbar {
-    /* justify-content: space-between; */
+    justify-content: space-between;
     width: 100vw;
 
 }
 
 span {
-    /* padding-right: 1rem; */
+    padding-right: 1rem;
+}
+
+.r {
+    padding-left: 3px;
 }
 

@@ -103,7 +103,7 @@
 .grid {
     border-width: 3px;
     border-style: solid;
-    border-color: rgb(234, 0, 255);
+    border-color: black;
     align-self: center;
     width: 100%;
 }

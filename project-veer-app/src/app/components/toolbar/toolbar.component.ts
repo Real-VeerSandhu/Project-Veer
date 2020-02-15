@@ -15,11 +15,16 @@ export class ToolbarComponent implements OnInit {
   }
 
   goToTools() {
-    this.router.navigate(['/tools'])
+    this.router.navigate(['/tools']);
   }
 
   goToHome() {
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
+  }
+
+  goToAdventures() {
+    this.router.navigate(['/adventures']);
+    console.log('adventures fired');
   }
 
 }
