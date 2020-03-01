@@ -13,6 +13,7 @@ import { FirestoreService } from 'src/services/firestore.service';
 import { LinearSystemComponent } from './linear-system/linear-system.component';
 import { GridComponent } from './grid/grid.component';
 import { QuadraticComponent } from './quadratic/quadratic.component';
+import { PeriodicBuildComponent } from './periodic-build/periodic-build.component';
 
 
 const routes: Routes =  [
@@ -24,7 +25,7 @@ const routes: Routes =  [
 ]
 
 @NgModule({
-  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent, GridComponent, QuadraticComponent],
+  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent, GridComponent, QuadraticComponent, PeriodicBuildComponent],
   entryComponents: [ElementDetailsComponent],
   imports: [
     CommonModule,

@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatToolbarModule, MatInputModule, MatCardModule, MatTabsModule, MatDialogModule, MatDividerModule, MatListModule, MatIconModule,  } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatInputModule, MatCardModule, MatTabsModule,
+  MatDialogModule, MatDividerModule, MatListModule, MatIconModule,  } from '@angular/material';
+import {MatExpansionModule} from '@angular/material/expansion'
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatRadioModule} from '@angular/material/radio';
+
+
+
 
 const MaterialComponents = [
   MatButtonModule,
@@ -10,7 +17,10 @@ const MaterialComponents = [
   MatDialogModule,
   MatDividerModule,
   MatListModule,
-  MatIconModule
+  MatIconModule,
+  MatExpansionModule,
+  DragDropModule,
+  MatRadioModule
 ];
 
 @NgModule({

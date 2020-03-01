@@ -1,87 +1,57 @@
 <app-toolbar></app-toolbar>
 <div class="main-container">
+    <div class="mode">
+        <mat-radio-group>
+            <mat-radio-button class="mode-buttons" >Explore</mat-radio-button>
+            <mat-radio-button class="mode-buttons" value="2">Build</mat-radio-button>
+        </mat-radio-group>
+    </div>
     <div class="p-table">
+        <app-periodic-build class="build-zone"></app-periodic-build>
         <ng-container *ngFor="let e of elementSummaryArray | slice: 0:57; let i = index">
-            <div [style.grid-column]="e.xpos">
-                <div class="element">
-                    <div class="number">
-                        {{e.number}}
-                    </div>
-                    <div class="symbol">
-                        {{e.symbol}}
-                    </div>
-                    <div class="name">
-                        {{e.name}}
-                    </div>
-                    <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
-                </div>
-            </div>
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container> 
+
         </ng-container>
         <ng-container *ngFor="let e of elementSummaryArray | slice: 71:89; let i = index">
-            <div [style.grid-column]="e.xpos">
-                <div class="element">
-                    <div class="number">
-                        {{e.number}}
-                    </div>
-                    <div class="symbol">
-                        {{e.symbol}}
-                    </div>
-                    <div class="name">
-                        {{e.name}}
-                    </div>
-                    <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
-                </div>
-            </div>
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
         </ng-container>
         <ng-container *ngFor="let e of elementSummaryArray | slice: 103:118; let i = index">
-            <div [style.grid-column]="e.xpos">
-                <div class="element">
-                    <div class="number">
-                        {{e.number}}
-                    </div>
-                    <div class="symbol">
-                        {{e.symbol}}
-                    </div>
-                    <div class="name">
-                        {{e.name}}
-                    </div>
-                    <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
-                </div>
-            </div>
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
         </ng-container>
     </div>
+
     <div class="heavy-metals">
         <ng-container *ngFor="let e of elementSummaryArray | slice: 57:71; let i = index ">
-            <div [style.grid-column]="e.xpos">
-                <div class="element">
-                    <div class="number">
-                        {{e.number}}
-                    </div>
-                    <div class="symbol">
-                        {{e.symbol}}
-                    </div>
-                    <div class="name">
-                        {{e.name}}
-                    </div>
-                    <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
-                </div>
-            </div>
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
         </ng-container>
         <ng-container *ngFor="let e of elementSummaryArray | slice: 89:103; let i = index">
-            <div [style.grid-column]="e.xpos">
-                <div class="element">
-                    <div class="number">
-                        {{e.number}}
-                    </div>
-                    <div class="symbol">
-                        {{e.symbol}}
-                    </div>
-                    <div class="name">
-                        {{e.name}}
-                    </div>
-                    <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
-                </div>
-            </div>
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
         </ng-container>
     </div>
 </div>
+
+<ng-template #elementTemplate let-e="eRef">
+    <div [style.grid-column]="e.xpos">
+        <div class="element">
+            <div class="number">
+                {{e.number}}
+            </div>
+            <div class="symbol">
+                {{e.symbol}}
+            </div>
+            <div class="name">
+                {{e.name}}
+            </div>
+            <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
+        </div>
+    </div>
+</ng-template>

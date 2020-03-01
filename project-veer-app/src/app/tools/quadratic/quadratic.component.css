@@ -9,3 +9,21 @@
     grid-column: 1;
     grid-row: 1;
 }
+
+.input-container {
+    margin-left: 10px;
+    height: 723px;
+    width: 650px;
+}
+
+.main-card {
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

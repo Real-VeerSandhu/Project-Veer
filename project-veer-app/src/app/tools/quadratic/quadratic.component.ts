@@ -9,21 +9,27 @@ import { GridComponent } from '../grid/grid.component';
 export class QuadraticComponent implements OnInit {
 
   @ViewChild('gridComp', {static: true})
+
+  xValue: number;
+  yValue: number;
+
   gridComp: GridComponent;
 
   showGrid = false;
   x: number;
   y: number;
 
+  xCalc = 15;
+  yCalc = 15;
+
+
   constructor() { }
 
   ngOnInit() {
-    this.plot();
   }
 
   plot() {
+    console.log('x, y point from inputs', this.xValue, this.yValue);
     this.showGrid = true;
-    this.x = 15;
-    this.y = 10;
   }
 }

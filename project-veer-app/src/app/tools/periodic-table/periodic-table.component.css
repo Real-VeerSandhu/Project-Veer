@@ -63,3 +63,21 @@
     grid-column: 1/-1;
     grid-row: 1/-1
 }
+
+.mode {
+    padding-left: 76.5%;
+    width: 20px;
+    align-content: center;
+}
+
+.mode-buttons {
+    margin: 5px;
+}
+
+.build-zone {
+    padding: 20px;
+    grid-row: 1/3;
+    grid-column: 3/12;
+    width: 80%;
+    height: 100%;
+}

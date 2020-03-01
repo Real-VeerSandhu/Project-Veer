@@ -10,10 +10,15 @@ export class GridComponent implements OnInit, AfterViewInit {
   public width = 750;
   public height = 750;
   gridScale = 25;
+  originOffset = 15;
+
+
   @Input()
-  pointX: number;
+  xInput: number;
   @Input()
-  pointY: number;
+  yInput: number;
+
+
 
   @ViewChild('canvas', { static: false }) public canvas: ElementRef;
   @ViewChild('rad', { static: false }) public rad: ElementRef;
@@ -22,6 +27,8 @@ export class GridComponent implements OnInit, AfterViewInit {
   @ViewChild('kCtrl', { static: false }) public kCtrl: ElementRef;
 
   private cx: CanvasRenderingContext2D;
+  pointX: number;
+  pointY: number;
 
   constructor() { }
 
@@ -29,10 +36,19 @@ export class GridComponent implements OnInit, AfterViewInit {
   }
 
   public ngAfterViewInit() {
+    this.createCanvas();
+  }
+  createGrid() {
+    this.drawXGrid();
+    this.drawYGrid();
+    this.drawNumbers();
+  }
+  createCanvas() {
     const canvasEl: HTMLCanvasElement = this.canvas.nativeElement;
     this.cx = canvasEl.getContext('2d');
     this.cx.lineWidth = 2;
-    this.createGrid();
+    this.createGrid(); // Creating the grid
+    //#region Create border
     this.cx.beginPath();
     this.cx.moveTo(375, 0);
     this.cx.lineTo(375, this.height);
@@ -44,12 +60,9 @@ export class GridComponent implements OnInit, AfterViewInit {
     this.cx.lineTo(this.width, 375);
     this.cx.strokeStyle = 'black';
     this.cx.stroke();
+    //#endregion
     this.plotPoint();
-  }
-  createGrid() {
-    this.drawXGrid();
-    this.drawYGrid();
-    this.drawNumbers();
+    this.drawParabola();
   }
 
   drawXGrid() {
@@ -72,14 +85,23 @@ export class GridComponent implements OnInit, AfterViewInit {
     }
   }
   drawNumbers() {
-    console.log('from drawNumbers()')
+    console.log('from drawNumbers()');
   }
   plotPoint() {
-    console.log(this.pointX, this.pointY);
+    this.pointX = this.xInput + this.originOffset;
+    this.pointY = this.originOffset - this.yInput;
+    console.log('from grid', this.pointX, this.pointY);
     this.cx.beginPath();
     this.cx.arc(this.pointX * this.gridScale, this.pointY * this.gridScale, 5, 0, 2 * Math.PI, true);
     this.cx.fillStyle = 'rgb(234, 0, 255)';
     this.cx.fill();
+    this.cx.strokeStyle = 'rgb(234, 0, 255)';
+    this.cx.stroke();
+  }
+  drawParabola() {
+    this.cx.beginPath();
+    this.cx.moveTo(0, 0);
+    this.cx.quadraticCurveTo(this.pointX * this.gridScale, (this.pointY * this.gridScale) * 2, (this.pointX * this.gridScale) * 2, 0);
     this.cx.strokeStyle = 'rgb(234, 0, 255)';
     this.cx.stroke();
   }

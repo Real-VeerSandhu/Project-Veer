@@ -1,3 +1,8 @@
 .main-container {
-    width: 600px;
+    width: 500px;
+}
+
+.list{
+    justify-content: center;
+    align-content: center;
 }
