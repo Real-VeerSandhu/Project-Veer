@@ -65,9 +65,10 @@
 }
 
 .mode {
-    padding-left: 76.5%;
+    padding-right: 10px;
     width: 20px;
     align-content: center;
+    grid-column: 18;
 }
 
 .mode-buttons {
@@ -80,4 +81,18 @@
     grid-column: 3/12;
     width: 80%;
     height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.configs {
+    width: 20px;
+    align-content: center;
+    grid-column: 1;
+}
+
+.selectors {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(75px, 75px));
+    grid-template-rows: 30px;
 }

@@ -4,6 +4,8 @@ import { MatButtonModule, MatToolbarModule, MatInputModule, MatCardModule, MatTa
 import {MatExpansionModule} from '@angular/material/expansion'
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -20,7 +22,8 @@ const MaterialComponents = [
   MatIconModule,
   MatExpansionModule,
   DragDropModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

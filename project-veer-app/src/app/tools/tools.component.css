@@ -1,4 +1,14 @@
-
+#title {
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+}
+  
+#header {
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
 
 .tool-buttons button {
 
@@ -24,8 +34,10 @@
     font-size: 25px;
 }
 
-.title {
-    text-align: center;
+.tool-buttons {
+    padding: 50px;
+    justify-content: center;
+    align-content: center;
 }
 
 

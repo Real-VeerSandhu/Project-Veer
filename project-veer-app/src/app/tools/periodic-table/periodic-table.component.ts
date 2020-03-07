@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { pTableData } from 'src/models/pTableData';
 import { MatDialog } from '@angular/material';
 import { ElementDetailsComponent } from '../element-details/element-details.component';
-import { PeriodicTableElement, ElementSummary } from 'src/models/periodic-table-element';
+import { ElementSummary } from 'src/models/periodic-table-element';
 import { PeriodicTableService } from 'src/services/periodic-table.service';
 import { Observable, Subscription } from 'rxjs';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-periodic-table',
@@ -20,26 +20,18 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
   elementSummaryArray: ElementSummary[] = [];
   sub: Subscription;
   subDetails: Subscription;
+  buildMode = false;
+  timesClicked = 0;
+  mode: string;
+  status: number; // Status of data being loaded
 
 
-  constructor(public dialog: MatDialog, private pts: PeriodicTableService) { }
-
-  openInfo(i: string) {
-    this.subDetails = this.pts.getElementBySymbol(i).subscribe(r => {
-      console.log('r', r);
-      const details = r[0];
-      console.log(details);
-      this.dialog.open(ElementDetailsComponent, { data: details });
-    });
-    console.log(i);
-
-  }
-
+  constructor(public dialog: MatDialog, private pts: PeriodicTableService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    console.log(pTableData());
-    this.periodicTable = pTableData();
-    console.log(this.periodicTable.elements[1].xpos);
+    // console.log(pTableData());
+    // // this.periodicTable = pTableData();
+    // // console.log(this.periodicTable.elements[1].xpos);
     // e is an Element of the table
     // const e = new PeriodicTableElement();
     // this.ed = e.convertDictionary();
@@ -51,7 +43,7 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
       for (const key in r) {
         if (r.hasOwnProperty(key)) {
           const ele = r[key];
-          console.log('ele', ele);
+          // console.log('ele', ele);
           if (!!ele.name) {
             this.elementSummaryArray.push({
               symbol: key,
@@ -61,27 +53,13 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
               ypos: ele.ypos
             });
             this.elementSummaryArray.sort((a, b) => a.number - b.number);
+            this.status = 1;
           }
         }
       }
       console.log('array: ', this.elementSummaryArray);
     });
   }
-
-  // addElement() {
-  //   const hKey = Object.keys(this.ed)[0];
-  //   for (const key in this.ed) {
-  //     if (this.ed.hasOwnProperty(key)) {
-  //       const ele = this.ed[key] as PeriodicTableElement;
-  //       this.pts.createElement(ele);
-  //     }
-  //   }
-  // }
-
-  // addTableView() {
-  //   this.pts.createPTable(this.pTable);
-  // }
-
   ngOnDestroy() {
     if (!!this.sub) {
       this.sub.unsubscribe();
@@ -89,6 +67,43 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
     if (!!this.subDetails) {
       this.subDetails.unsubscribe();
     }
+  }
+  elementClicked(symbol: string) {
+    if (!this.buildMode) {
+      this.openInfo(symbol);
+    } else {
+      this.builder(symbol);
+    }
+  }
+  openInfo(symbol: string) {
+    this.subDetails = this.pts.getElementBySymbol(symbol).subscribe(r => {
+      console.log('r', r);
+      const details = r[0];
+      console.log(details);
+      this.dialog.open(ElementDetailsComponent, { data: details });
+    });
+  }
+  onChange(event) {
+    this.mode = '';
+    console.log('CHANGED');
+    console.log('buildMode status: ', this.buildMode);
+    console.log('event is ', event);
+    if (this.buildMode === false) {
+      this.mode = 'Explore Mode';
+    } else {
+      this.mode = 'Build Mode';
+    }
+    this.snackBar.open(this.mode, '', {
+      duration: 1000
+    });
+
+  }
+  builder(symbol: string) {
+    this.timesClicked = this.timesClicked + 1;
+    console.log(symbol, this.timesClicked);
+  }
+  configElement() {
+    console.log('This is configElement() funtion!');
   }
 }
 

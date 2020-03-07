@@ -14,12 +14,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToCircleEquation() {
-    this.router.navigate(['/tools/circle-equation']);
+  goToTools() {
+    this.router.navigate(['/tools']);
   }
-  goToPTableTool() {
-    this.router.navigate(['/tools/periodic-table']);
-    console.log('To Be Done');
+  goToAdventures() {
+    this.router.navigate(['/adventures']);
   }
 
 }

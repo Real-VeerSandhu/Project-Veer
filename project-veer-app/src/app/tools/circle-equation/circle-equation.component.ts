@@ -49,7 +49,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
     canvasEl.height = this.height;
 
 
-    this.cx.lineWidth = 3;
+    this.cx.lineWidth = 4;
     this.cx.lineCap = 'square';
     this.cx.strokeStyle = 'grey';
     this.drawYGrid();
@@ -85,7 +85,7 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
     this.cx.lineTo(this.width, 300);
     this.cx.strokeStyle = 'black';
     this.cx.stroke();
-    console.log('H: ', this.k, 'K: ', this.k)
+    console.log('H: ', this.k, 'K: ', this.k);
   }
 
   drawYGrid() {
@@ -115,11 +115,10 @@ export class CircleEquationComponent implements OnInit, AfterViewInit {
   }
   drawCircle() {
     this.cx.beginPath();
-    let u = this.cx.arc(300 + this.h, 300 + this.k, this.radius, 0, Math.PI * 2, true);
+    this.cx.arc(300 + this.h, 300 + this.k, this.radius, 0, Math.PI * 2, true);
     this.cx.strokeStyle = 'black';
     this.cx.stroke();
     this.cx.closePath();
-
   }
   drawPoint() {
     // tslint:disable-next-line: prefer-const

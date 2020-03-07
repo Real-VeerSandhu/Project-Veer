@@ -1,6 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
-import { pTableData } from 'src/models/pTableData';
 import { PeriodicTableService } from 'src/services/periodic-table.service';
 import { PeriodicTableElement } from 'src/models/periodic-table-element';
 
@@ -19,12 +18,10 @@ export class ElementDetailsComponent implements OnInit {
   ngOnInit() {
     // this.periodicTable = pTableData();
     // console.log(this.data.symbol);
-    
     // this.pts.getElementBySymbol(this.data.symbol).subscribe(r => {
     //   console.log('r', r);
     //   this.elementDetail = r[0];
     //   console.log(this.elementDetail);
     // });
-    console.log('This is data: ', this.data);
   }
 }

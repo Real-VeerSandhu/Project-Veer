@@ -12,7 +12,7 @@ export class PeriodicTableElement {
 
     name: string;
     appearance: string;
-    atomicMass: number;
+    atomic_mass: number;
     boil: number;
     category: string;
     color: string;

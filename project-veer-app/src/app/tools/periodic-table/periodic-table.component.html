@@ -1,10 +1,15 @@
 <app-toolbar></app-toolbar>
-<div class="main-container">
-    <div class="mode">
-        <mat-radio-group>
-            <mat-radio-button class="mode-buttons" >Explore</mat-radio-button>
-            <mat-radio-button class="mode-buttons" value="2">Build</mat-radio-button>
-        </mat-radio-group>
+<div class="main-container"  *ngIf="status == 1">
+    <div class="selectors">
+        <div class="mode">
+            <mat-radio-group [(ngModel)]="buildMode" (change)="onChange($event)">
+                <mat-radio-button class="mode-buttons" [value]="false">Explore</mat-radio-button>
+                <mat-radio-button class="mode-buttons" [value]="true">Build</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="configs">
+            <button mat-raised-button (click)="configElement()">Configure Element</button>
+        </div>
     </div>
     <div class="p-table">
         <app-periodic-build class="build-zone"></app-periodic-build>
@@ -51,7 +56,7 @@
             <div class="name">
                 {{e.name}}
             </div>
-            <button mat-stroked-button class="element-button" (click)="openInfo(e.symbol)"></button>
+            <button mat-stroked-button class="element-button" (click)="elementClicked(e.symbol)"></button>
         </div>
     </div>
 </ng-template>

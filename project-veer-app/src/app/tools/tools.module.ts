@@ -14,6 +14,7 @@ import { LinearSystemComponent } from './linear-system/linear-system.component';
 import { GridComponent } from './grid/grid.component';
 import { QuadraticComponent } from './quadratic/quadratic.component';
 import { PeriodicBuildComponent } from './periodic-build/periodic-build.component';
+import { ConfigureElementComponent } from './configure-element/configure-element.component';
 
 
 const routes: Routes =  [
@@ -22,10 +23,12 @@ const routes: Routes =  [
   { path: 'periodic-table', component: PeriodicTableComponent},
   { path: 'linear-system', component: LinearSystemComponent },
   { path: 'parabola', component: QuadraticComponent }
-]
+];
 
 @NgModule({
-  declarations: [ToolsComponent, CircleEquationComponent, PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent, GridComponent, QuadraticComponent, PeriodicBuildComponent],
+  declarations: [ToolsComponent, CircleEquationComponent,
+    PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent,
+    GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent],
   entryComponents: [ElementDetailsComponent],
   imports: [
     CommonModule,
