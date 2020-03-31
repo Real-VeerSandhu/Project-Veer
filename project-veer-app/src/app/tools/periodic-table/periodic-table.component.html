@@ -1,5 +1,5 @@
 <app-toolbar></app-toolbar>
-<div class="main-container"  *ngIf="status == 1">
+<div class="main-container"  *ngIf="elementSummaryArray.length > 1">
     <div class="selectors">
         <div class="mode">
             <mat-radio-group [(ngModel)]="buildMode" (change)="onChange($event)">
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="p-table">
-        <app-periodic-build class="build-zone"></app-periodic-build>
+        <app-periodic-build [clickedElements]="elementsClickedArray" [elements]="elementSummaryArray" class="build-zone"></app-periodic-build>
         <ng-container *ngFor="let e of elementSummaryArray | slice: 0:57; let i = index">
 
             <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container> 

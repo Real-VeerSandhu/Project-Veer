@@ -1,18 +1,20 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ElementDetailsComponent } from '../element-details/element-details.component';
 import { ElementSummary } from 'src/models/periodic-table-element';
 import { PeriodicTableService } from 'src/services/periodic-table.service';
 import { Observable, Subscription } from 'rxjs';
 import { MatSnackBar } from '@angular/material';
+import { ConfigureElementComponent } from '../configure-element/configure-element.component';
 
 @Component({
   selector: 'app-periodic-table',
   templateUrl: './periodic-table.component.html',
-  styleUrls: ['./periodic-table.component.css']
+  styleUrls: ['./periodic-table.component.css'],
 })
-export class PeriodicTableComponent implements OnInit, OnDestroy {
 
+export class PeriodicTableComponent implements OnInit, OnDestroy {
+  
   periodicTable: any;
   ed: { [key: string]: {} }; // Element dictionary
   pTable: { [key: string]: ElementSummary };
@@ -21,9 +23,8 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
   sub: Subscription;
   subDetails: Subscription;
   buildMode = false;
-  timesClicked = 0;
+  elementsClickedArray = [];
   mode: string;
-  status: number; // Status of data being loaded
 
 
   constructor(public dialog: MatDialog, private pts: PeriodicTableService, private snackBar: MatSnackBar) { }
@@ -53,11 +54,9 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
               ypos: ele.ypos
             });
             this.elementSummaryArray.sort((a, b) => a.number - b.number);
-            this.status = 1;
           }
         }
       }
-      console.log('array: ', this.elementSummaryArray);
     });
   }
   ngOnDestroy() {
@@ -99,11 +98,15 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
 
   }
   builder(symbol: string) {
-    this.timesClicked = this.timesClicked + 1;
-    console.log(symbol, this.timesClicked);
+    this.elementsClickedArray.push(symbol);
+    this.elementsClickedArray = this.elementsClickedArray.sort().slice();
   }
+  /** Opens configure element component via dialog */
   configElement() {
-    console.log('This is configElement() funtion!');
+    this.dialog.open(ConfigureElementComponent, {
+      width: '500px',
+      height: '500px'
+    });
   }
 }
 

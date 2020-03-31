@@ -26,4 +26,7 @@ export class ToolsComponent implements OnInit {
   goToParabolaTool() {
     this.router.navigate(['/tools/parabola']);
   }
+  goToBinaryHexTool() {
+    this.router.navigate(['/tools/binary-hex-converter']);
+  }
 }

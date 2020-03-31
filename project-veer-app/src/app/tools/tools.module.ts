@@ -15,6 +15,7 @@ import { GridComponent } from './grid/grid.component';
 import { QuadraticComponent } from './quadratic/quadratic.component';
 import { PeriodicBuildComponent } from './periodic-build/periodic-build.component';
 import { ConfigureElementComponent } from './configure-element/configure-element.component';
+import { BinaryHexConverterComponent } from './binary-hex-converter/binary-hex-converter.component';
 
 
 const routes: Routes =  [
@@ -22,14 +23,16 @@ const routes: Routes =  [
   { path: 'circle-equation', component: CircleEquationComponent},
   { path: 'periodic-table', component: PeriodicTableComponent},
   { path: 'linear-system', component: LinearSystemComponent },
-  { path: 'parabola', component: QuadraticComponent }
+  { path: 'parabola', component: QuadraticComponent },
+  { path: 'binary-hex-converter', component: BinaryHexConverterComponent }
+
 ];
 
 @NgModule({
   declarations: [ToolsComponent, CircleEquationComponent,
     PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent,
-    GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent],
-  entryComponents: [ElementDetailsComponent],
+    GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent, BinaryHexConverterComponent],
+  entryComponents: [ElementDetailsComponent, ConfigureElementComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

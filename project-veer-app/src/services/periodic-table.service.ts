@@ -14,7 +14,6 @@ export class PeriodicTableService {
         try {
             const r = await this.db.add(this.collectionName, data);
             console.log('documentRefrence', r);
-            
         } catch (error) {
             console.log('error occured', error);
         }
@@ -23,7 +22,6 @@ export class PeriodicTableService {
         try {
             await this.db.set(`${this.collectionName}/periodicTable`, data);
             console.log('document created');
-            
         } catch (error) {
             console.log('error occured', error);
         }
@@ -33,5 +31,10 @@ export class PeriodicTableService {
     }
     getElementBySymbol(symbol: string): Observable<PeriodicTableElement[]> {
         return this.db.colWithIdsInjected$(this.collectionName, ref => ref.where('symbol', '==', symbol).limit(1));
+    }
+    eleQuery(protons: number): Observable<PeriodicTableElement[]> {
+        return this.db.colWithIdsInjected$(this.collectionName, ref => ref
+            .where('number', '==', protons)
+            .limit(1));
     }
 }
