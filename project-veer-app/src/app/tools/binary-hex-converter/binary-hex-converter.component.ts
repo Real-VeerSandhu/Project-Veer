@@ -85,7 +85,7 @@ export class BinaryHexConverterComponent implements OnInit {
     });
     for (let i = 0; i < result.length; i++) {
       console.log(result[i]);
-      this.decimalValue = this.decimalValue + (+(result[i]) * Math.pow(16, i))
+      this.decimalValue = this.decimalValue + (+(result[i]) * Math.pow(16, i));
     }
     this.decimalConverter();
   }
@@ -98,8 +98,8 @@ export class BinaryHexConverterComponent implements OnInit {
     let binNumber = [];
     let decValue = this.decimalValue;
     while (decValue >= 1) {
-      binNumber.push(decValue % 2)
-      decValue = Math.floor(decValue / 2)
+      binNumber.push(decValue % 2);
+      decValue = Math.floor(decValue / 2);
     }
     binNumber = binNumber.reverse();
     binNumber.forEach(ele => {
@@ -114,6 +114,7 @@ export class BinaryHexConverterComponent implements OnInit {
     this.decimalValue = null;
   }
 
-
-
+  binaryInput(e) {
+    console.log({e});
+  }
 }

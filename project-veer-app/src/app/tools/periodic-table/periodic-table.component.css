@@ -26,6 +26,12 @@
     justify-content: center;
     align-content: center;
     font-size: 10px;
+    transition: 200ms;
+}
+
+.element:hover {
+    transform: scale(1.1);
+    transition: 200ms;
 }
 
 .number {
@@ -61,8 +67,9 @@
 
 .element-button {
     grid-column: 1/-1;
-    grid-row: 1/-1
+    grid-row: 1/-1;
 }
+
 
 .mode {
     padding-right: 10px;

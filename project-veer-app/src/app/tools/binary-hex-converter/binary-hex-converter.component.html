@@ -1,30 +1,36 @@
 <app-toolbar></app-toolbar>
 <div class="main-container">
     <div class="card-container">
-        <mat-card class="card"> 
-            <mat-card-header>
-                <h1>Binary, Hexadecimal and Decimal Converter</h1>
+        <mat-card class="card">
+            <mat-card-header class="header">
+                <h1>Binary <mat-icon>swap_horiz
+                    </mat-icon> Hexadecimal <mat-icon>swap_horiz
+                    </mat-icon> Decimal </h1>
             </mat-card-header>
-            <div class="decimal-input-container">
-                <mat-form-field appearance="fill">
-                    <mat-label>Decimal</mat-label>
-                    <input matInput type="number" [(ngModel)]="decimalValue">
-                  </mat-form-field>
-            </div>
-            <div class="binary-input-container">
-                <mat-form-field appearance="fill">
-                    <mat-label>Binary</mat-label>
-                    <input matInput type="number" [(ngModel)]="binaryValue" >
-                  </mat-form-field>
-            </div>
-            <div class="hex-input-container">
-                <mat-form-field appearance="fill">
-                    <mat-label>Hexadecimal</mat-label>
-                    <input matInput type="text" [(ngModel)]="hexValue">
-                  </mat-form-field>
+            <div class="inputs">
+                <div class="binary-input-container">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Binary</mat-label>
+                        <input (change)="binaryInput($event)" matInput type="number" [(ngModel)]="binaryValue" [disabled]="!!hexValue || !!decimalValue" maxlength="18">
+                    </mat-form-field>
+                </div>
+                <div class="hex-input-container">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hexadecimal</mat-label>
+                        <input matInput type="text" [(ngModel)]="hexValue" [disabled]="!!binaryValue || !!decimalValue">
+                    </mat-form-field>
+                </div>
+                <div class="decimal-input-container">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Decimal</mat-label>
+                        <input matInput type="number" [(ngModel)]="decimalValue" [disabled]="!!hexValue || !!binaryValue">
+                    </mat-form-field>
+                </div>
             </div>
             <button mat-raised-button (click)="findInput()">Convert</button>
-            <button mat-stroked-button (click)="clear()">Clear</button>
+            <button mat-stroked-button (click)="clear()">
+                <mat-icon>clear</mat-icon>
+            </button>
 
         </mat-card>
     </div>

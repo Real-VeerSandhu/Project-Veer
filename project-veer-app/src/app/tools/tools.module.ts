@@ -10,7 +10,6 @@ import { PeriodicTableComponent } from './periodic-table/periodic-table.componen
 import { ElementDetailsComponent } from './element-details/element-details.component';
 import { PeriodicTableService } from 'src/services/periodic-table.service';
 import { FirestoreService } from 'src/services/firestore.service';
-import { LinearSystemComponent } from './linear-system/linear-system.component';
 import { GridComponent } from './grid/grid.component';
 import { QuadraticComponent } from './quadratic/quadratic.component';
 import { PeriodicBuildComponent } from './periodic-build/periodic-build.component';
@@ -22,7 +21,6 @@ const routes: Routes =  [
   { path: '', component: ToolsComponent },
   { path: 'circle-equation', component: CircleEquationComponent},
   { path: 'periodic-table', component: PeriodicTableComponent},
-  { path: 'linear-system', component: LinearSystemComponent },
   { path: 'parabola', component: QuadraticComponent },
   { path: 'binary-hex-converter', component: BinaryHexConverterComponent }
 
@@ -30,7 +28,7 @@ const routes: Routes =  [
 
 @NgModule({
   declarations: [ToolsComponent, CircleEquationComponent,
-    PeriodicTableComponent, ElementDetailsComponent, LinearSystemComponent,
+    PeriodicTableComponent, ElementDetailsComponent,
     GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent, BinaryHexConverterComponent],
   entryComponents: [ElementDetailsComponent, ConfigureElementComponent],
   imports: [
