@@ -15,6 +15,7 @@ import { QuadraticComponent } from './quadratic/quadratic.component';
 import { PeriodicBuildComponent } from './periodic-build/periodic-build.component';
 import { ConfigureElementComponent } from './configure-element/configure-element.component';
 import { BinaryHexConverterComponent } from './binary-hex-converter/binary-hex-converter.component';
+import { DirectiveModule } from '../directives/directive.module';
 
 
 const routes: Routes =  [
@@ -36,7 +37,8 @@ const routes: Routes =  [
     RouterModule.forChild(routes),
     ComponentModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    DirectiveModule
   ],
   providers: [
     PeriodicTableService,

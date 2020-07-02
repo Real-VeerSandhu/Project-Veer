@@ -55,21 +55,21 @@ export class BinaryHexConverterComponent implements OnInit {
       hexNumbers.push(workNum % 16);
       workNum = Math.floor(workNum / 16);
     }
-    console.log('NUMBERS:', hexNumbers.reverse());
-    this.hexString(hexNumbers);
+    // console.log('NUMBERS:', hexNumbers.reverse());
+    this.hexString(hexNumbers.reverse());
   }
   hexString(hexNumbers: number[]) {
     let hexString = '';
     hexNumbers.forEach(ele => {
-      console.log('ELEMENTS: ', ele);
+      // console.log('ELEMENTS: ', ele);
       if (ele <= 9) {
         hexString = hexString + ele;
       } else {
         hexString = hexString + String.fromCharCode((ele - 9) + 64);
       }
     });
-    console.log('STRING', hexString);
-    this.hexValue = hexString;
+    // console.log('STRING', hexString);
+    this.hexValue = hexString.toLocaleUpperCase();
   }
   hexSolo() {
     const workArr = `${this.hexValue}`.split('').reverse();
@@ -112,9 +112,5 @@ export class BinaryHexConverterComponent implements OnInit {
     this.binaryValue = null;
     this.hexValue = null;
     this.decimalValue = null;
-  }
-
-  binaryInput(e) {
-    console.log({e});
   }
 }

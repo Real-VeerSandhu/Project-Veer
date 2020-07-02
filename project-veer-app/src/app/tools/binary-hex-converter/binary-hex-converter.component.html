@@ -17,7 +17,7 @@
                 <div class="hex-input-container">
                     <mat-form-field appearance="fill">
                         <mat-label>Hexadecimal</mat-label>
-                        <input matInput type="text" [(ngModel)]="hexValue" [disabled]="!!binaryValue || !!decimalValue">
+                        <input matInput type="text" [(ngModel)]="hexValue" hexMask [disabled]="!!binaryValue || !!decimalValue">
                     </mat-form-field>
                 </div>
                 <div class="decimal-input-container">
