@@ -11,7 +11,7 @@
                 <div class="binary-input-container">
                     <mat-form-field appearance="fill">
                         <mat-label>Binary</mat-label>
-                        <input (change)="binaryInput($event)" matInput type="number" [(ngModel)]="binaryValue" [disabled]="!!hexValue || !!decimalValue" maxlength="18">
+                        <input matInput type="number" [(ngModel)]="binaryValue" binaryMask [disabled]="!!hexValue || !!decimalValue" maxlength="18" id="binInput">
                     </mat-form-field>
                 </div>
                 <div class="hex-input-container">
