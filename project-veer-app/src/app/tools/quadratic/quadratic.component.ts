@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GridComponent } from '../grid/grid.component';
+// import { GridComponent } from '../grid/grid.component';
 
 @Component({
   selector: 'app-quadratic',
@@ -8,28 +8,29 @@ import { GridComponent } from '../grid/grid.component';
 })
 export class QuadraticComponent implements OnInit {
 
-  @ViewChild('gridComp', {static: true})
+  // @ViewChild('gridComp', {static: true})
 
-  xValue: number;
-  yValue: number;
+  url = 'https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6';
 
-  gridComp: GridComponent;
-
-  showGrid = false;
-  x: number;
-  y: number;
-
-  xCalc = 15;
-  yCalc = 15;
+  loadAPI: Promise<any>;
 
 
   constructor() { }
 
   ngOnInit() {
+    this.loadAPI = new Promise((resolve) => {
+      console.log('resolving promise...');
+      this.loadScript();
+    });
+    this.loadScript();
   }
-
-  plot() {
-    console.log('x, y point from inputs', this.xValue, this.yValue);
-    this.showGrid = true;
+  public loadScript() {
+    console.log('preparing to load...')
+    let node = document.createElement('script');
+    node.src = this.url;
+    node.type = 'text/javascript';
+    node.async = true;
+    node.charset = 'utf-8';
+    document.getElementsByTagName('head')[0].appendChild(node);
   }
 }

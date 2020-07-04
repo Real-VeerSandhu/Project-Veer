@@ -29,4 +29,7 @@ export class ToolsComponent implements OnInit {
   goToBinaryHexTool() {
     this.router.navigate(['/tools/binary-hex-converter']);
   }
+  goToTrigTool() {
+    this.router.navigate(['/tools/trigonometry']);
+  }
 }

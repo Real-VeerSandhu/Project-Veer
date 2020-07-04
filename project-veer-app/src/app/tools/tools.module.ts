@@ -16,6 +16,7 @@ import { PeriodicBuildComponent } from './periodic-build/periodic-build.componen
 import { ConfigureElementComponent } from './configure-element/configure-element.component';
 import { BinaryHexConverterComponent } from './binary-hex-converter/binary-hex-converter.component';
 import { DirectiveModule } from '../directives/directive.module';
+import { TrigComponent } from './trig/trig.component';
 
 
 const routes: Routes =  [
@@ -23,14 +24,15 @@ const routes: Routes =  [
   { path: 'circle-equation', component: CircleEquationComponent},
   { path: 'periodic-table', component: PeriodicTableComponent},
   { path: 'parabola', component: QuadraticComponent },
-  { path: 'binary-hex-converter', component: BinaryHexConverterComponent }
+  { path: 'binary-hex-converter', component: BinaryHexConverterComponent },
+  { path: 'trigonometry', component: TrigComponent }
 
 ];
 
 @NgModule({
   declarations: [ToolsComponent, CircleEquationComponent,
     PeriodicTableComponent, ElementDetailsComponent,
-    GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent, BinaryHexConverterComponent],
+    GridComponent, QuadraticComponent, PeriodicBuildComponent, ConfigureElementComponent, BinaryHexConverterComponent, TrigComponent],
   entryComponents: [ElementDetailsComponent, ConfigureElementComponent],
   imports: [
     CommonModule,
