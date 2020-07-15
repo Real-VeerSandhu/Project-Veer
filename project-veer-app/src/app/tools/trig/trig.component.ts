@@ -16,6 +16,7 @@ export class TrigComponent implements OnInit {
   theta3: number;
   firstUseCosLaw = false;
   radConversion = Math.PI / 180;
+  degreeConversion = 180 / Math.PI;
 
 
   constructor() { }
@@ -48,15 +49,21 @@ export class TrigComponent implements OnInit {
   }
 
   scen1Cos() {
-    this.C = Math.sqrt( (this.A * this.A + this.B * this.B) + ((-2) *
-    this.A * this.B * Math.cos(this.theta1 * this.radConversion)));
+    this.C = Math.round(Math.sqrt( (this.A * this.A + this.B * this.B) + ((-2) *
+    this.A * this.B * Math.cos(this.theta1 * this.radConversion))));
+    this.theta2 = Math.round(Math.asin((Math.sin(this.theta1 * this.radConversion) * this.B) / this.A) * this.degreeConversion);
+    this.theta3 = 180 - (this.theta1 + this.theta2);
   }
   scen2Cos() {
-    this.B = Math.sqrt( (this.A * this.A + this.C * this.C) + ((-2) *
-    this.A * this.C * Math.cos(this.theta2 * this.radConversion)));
+    this.B = Math.round(Math.sqrt( (this.A * this.A + this.C * this.C) + ((-2) *
+    this.A * this.C * Math.cos(this.theta2 * this.radConversion))));
+    this.theta1 = Math.round(Math.asin((Math.sin(this.theta2 * this.radConversion) * this.A) / this.C) * this.degreeConversion);
+    this.theta3 = 180 - (this.theta1 + this.theta2);
   }
   scen3Cos() {
-    this.A = Math.sqrt( (this.B * this.B + this.C * this.C) + ((-2) *
-    this.B * this.C * Math.cos(this.theta3 * this.radConversion)));
+    this.A = Math.round(Math.sqrt( (this.B * this.B + this.C * this.C) + ((-2) *
+    this.B * this.C * Math.cos(this.theta3 * this.radConversion))));
+    this.theta2 = Math.round(Math.asin((Math.sin(this.theta3 * this.radConversion) * this.C) / this.B) * this.degreeConversion);
+    this.theta1 = 180 - (this.theta3 + this.theta2);
   }
 }
