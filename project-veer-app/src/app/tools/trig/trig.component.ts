@@ -37,6 +37,7 @@ export class TrigComponent implements OnInit {
     } else {
       alert('Invalid number of inputs');
     }
+    this.checkAngleRule();
   }
 
   clear() {
@@ -65,5 +66,10 @@ export class TrigComponent implements OnInit {
     this.B * this.C * Math.cos(this.theta3 * this.radConversion))));
     this.theta2 = Math.round(Math.asin((Math.sin(this.theta3 * this.radConversion) * this.C) / this.B) * this.degreeConversion);
     this.theta1 = 180 - (this.theta3 + this.theta2);
+  }
+  checkAngleRule() {
+    if (this.theta1 + this.theta2 + this.theta3 > 180) {
+      alert('Sum of interior angles is greater than 180 degrees');
+    }
   }
 }

@@ -9,9 +9,9 @@
         <mat-divider></mat-divider>
         <mat-list-item>Density: {{data.density}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>Boil: {{data.boil}}</mat-list-item>
+        <mat-list-item *ngIf="data.boil">Boil: {{data.boil}}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>Melt: {{data.melt}}</mat-list-item>
+        <mat-list-item *ngIf="data.melt">Melt: {{data.melt}}</mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>Valance Electrons: {{data.shells[data.shells.length-1]}}</mat-list-item>
         <mat-divider></mat-divider>

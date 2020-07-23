@@ -99,7 +99,7 @@ export class PeriodicTableComponent implements OnInit, OnDestroy {
   }
   builder(symbol: string) {
     this.elementsClickedArray.push(symbol);
-    this.elementsClickedArray = this.elementsClickedArray.sort().slice();
+    this.elementsClickedArray = this.elementsClickedArray.slice();
   }
   /** Opens configure element component via dialog */
   configElement() {

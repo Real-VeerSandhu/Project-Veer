@@ -34,7 +34,7 @@
 
 .origin {
     display: grid;
-    grid-template-columns: 25px 25px 25px 25px 50px 150px;
+    grid-template-columns: 25px 25px 25px 25px 70px 150px;
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
