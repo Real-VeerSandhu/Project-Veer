@@ -17,6 +17,7 @@ export class TrigComponent implements OnInit {
   firstUseCosLaw = false;
   radConversion = Math.PI / 180;
   degreeConversion = 180 / Math.PI;
+  anglesOver180 = false;
 
 
   constructor() { }
@@ -25,6 +26,7 @@ export class TrigComponent implements OnInit {
   }
 
   findInput() {
+    // this.checkAngleRule();
     if (this.theta1 && this.A && this.B) {
       this.scen1Cos();
       this.firstUseCosLaw = true;
@@ -34,10 +36,21 @@ export class TrigComponent implements OnInit {
     } else if (this.theta3 && this.C && this.B) {
       this.scen3Cos();
       this.firstUseCosLaw = true;
+    } else if (this.theta1 && this.theta2 && this.B) {
+      this.scen1Sin();
+    } else if (this.theta1 && this.theta2 && this.C) {
+      this.scen2Sin();
+    } else if (this.theta2 && this.theta3 && this.A) {
+      this.scen3Sin();
+    } else if (this.theta2 && this.theta3 && this.B) {
+      this.scen4Sin();
+    } else if (this.theta1 && this.theta3 && this.C) {
+      this.scen5Sin();
+    } else if (this.theta1 && this.theta3 && this.A) {
+      this.scen6Sin();
     } else {
       alert('Invalid number of inputs');
     }
-    this.checkAngleRule();
   }
 
   clear() {
@@ -50,26 +63,61 @@ export class TrigComponent implements OnInit {
   }
 
   scen1Cos() {
-    this.C = Math.round(Math.sqrt( (this.A * this.A + this.B * this.B) + ((-2) *
+    this.C = (Math.sqrt( (this.A * this.A + this.B * this.B) + ((-2) *
     this.A * this.B * Math.cos(this.theta1 * this.radConversion))));
-    this.theta2 = Math.round(Math.asin((Math.sin(this.theta1 * this.radConversion) * this.B) / this.A) * this.degreeConversion);
+    this.theta2 = (Math.asin((Math.sin(this.theta1 * this.radConversion) * this.B) / this.A) * this.degreeConversion);
     this.theta3 = 180 - (this.theta1 + this.theta2);
   }
+
   scen2Cos() {
-    this.B = Math.round(Math.sqrt( (this.A * this.A + this.C * this.C) + ((-2) *
+    this.B = (Math.sqrt( (this.A * this.A + this.C * this.C) + ((-2) *
     this.A * this.C * Math.cos(this.theta2 * this.radConversion))));
-    this.theta1 = Math.round(Math.asin((Math.sin(this.theta2 * this.radConversion) * this.A) / this.C) * this.degreeConversion);
+    this.theta1 = (Math.asin((Math.sin(this.theta2 * this.radConversion) * this.A) / this.C) * this.degreeConversion);
     this.theta3 = 180 - (this.theta1 + this.theta2);
   }
+
   scen3Cos() {
-    this.A = Math.round(Math.sqrt( (this.B * this.B + this.C * this.C) + ((-2) *
+    this.A = (Math.sqrt( (this.B * this.B + this.C * this.C) + ((-2) *
     this.B * this.C * Math.cos(this.theta3 * this.radConversion))));
-    this.theta2 = Math.round(Math.asin((Math.sin(this.theta3 * this.radConversion) * this.C) / this.B) * this.degreeConversion);
+    this.theta2 = (Math.asin((Math.sin(this.theta3 * this.radConversion) * this.C) / this.B) * this.degreeConversion);
     this.theta1 = 180 - (this.theta3 + this.theta2);
   }
+
+  scen1Sin() {
+    this.theta3 = 180 - (this.theta1 + this.theta2);
+    this.A = (this.B * Math.sin(this.theta3 * this.radConversion)) / Math.sin(this.theta2 * this.radConversion);
+    this.C = (this.B * Math.sin(this.theta1 * this.radConversion)) / Math.sin(this.theta2 * this.radConversion);
+  }
+
+  scen2Sin() {
+    this.theta3 = 180 - (this.theta1 + this.theta2);
+    this.B = (this.C * Math.sin(this.theta2 * this.radConversion)) / Math.sin(this.theta1 * this.radConversion);
+    this.A = (this.C * Math.sin(this.theta3 * this.radConversion)) / Math.sin(this.theta1 * this.radConversion);
+  }
+
+  scen3Sin() {
+    this.theta1 = 180 - (this.theta3 + this.theta2);
+    this.B = (this.A * Math.sin(this.theta2 * this.radConversion)) / Math.sin(this.theta3 * this.radConversion);
+    this.C = (this.A * Math.sin(this.theta1 * this.radConversion)) / Math.sin(this.theta3 * this.radConversion);
+  }
+  scen4Sin() {
+    this.theta1 = 180 - (this.theta3 + this.theta2);
+
+  }
+
+  scen5Sin() {
+  }
+
+  scen6Sin() {
+  }
+
   checkAngleRule() {
-    if (this.theta1 + this.theta2 + this.theta3 > 180) {
+    if ((this.theta1 + this.theta2) > 180 || (this.theta1 + this.theta3) > 180 || (this.theta2 + this.theta3) > 180) {
       alert('Sum of interior angles is greater than 180 degrees');
+      this.clear();
+      this.anglesOver180 = true;
+    } else {
+      this.findInput();
     }
   }
 }
