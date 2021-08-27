@@ -1,0 +1,65 @@
+#title {
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+}
+  
+#header {
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.target {
+    transition: 200ms;
+    text-align: center;
+    justify-items: center;
+}
+
+.target:hover {
+    transform: scale(1.03);
+    transition: transform 200ms;
+}
+
+.adventure-buttons {
+    width: auto;
+    height: auto;
+    margin: 20%;
+    margin: auto;
+}
+
+.adventure-buttons a {
+    margin: auto;
+    /* display: block;
+    margin-left: 25px;
+    margin-right: 25px; */
+    /* justify-self: center;
+    align-self: center;
+    justify-items: center;
+    align-content: center; */
+    /* background-color: bisque; */
+}
+
+.adventure-buttons button {
+
+    cursor: pointer;
+    text-align: center;
+  
+    width: 350px;
+    height: 150px;
+    line-height: 100px;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+ 
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-top: 8px;
+    padding: 30px 60px;
+    font-size: 25px;
+}

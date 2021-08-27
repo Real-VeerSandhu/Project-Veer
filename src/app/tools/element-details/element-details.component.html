@@ -1,0 +1,21 @@
+<div class="main-container" *ngIf="!!data">
+    <mat-list class="list">
+        <h1 mat-subheader>{{data.name}} 
+            ({{data.symbol}}): 
+            {{data.phase}}</h1>
+        <mat-list-item>Atomic Number: {{data.number}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Atomic Mass: {{data.atomic_mass}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Density: {{data.density}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngIf="data.boil">Boil: {{data.boil}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngIf="data.melt">Melt: {{data.melt}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Valance Electrons: {{data.shells[data.shells.length-1]}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <p>{{data.summary}}</p>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>

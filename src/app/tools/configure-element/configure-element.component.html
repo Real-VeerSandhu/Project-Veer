@@ -1,0 +1,19 @@
+<div class="main-container">
+    <div class="element" *ngIf="!!element">
+        <div class="symbol">
+            {{element.symbol}}
+        </div>
+        <div class="name">
+            {{element.name}}
+        </div>
+        <button mat-stroked-button class="element-button"></button>
+    </div>
+    <div class="input">
+        <div class="protons">
+            Protons: {{value}}
+        </div>
+        <div>
+            <mat-slider (change)="getElement()" [max]="118" [min]="1" [(ngModel)]="value" class="slider"></mat-slider>
+        </div>
+    </div>
+</div>

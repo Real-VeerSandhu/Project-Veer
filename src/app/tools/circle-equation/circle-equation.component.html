@@ -1,0 +1,86 @@
+<app-toolbar></app-toolbar>
+<div>
+    <div class="eq-container">
+        <mat-card class="equation-card">
+            <div class="sub-eq-container">
+                <mat-card-title>Equation of a Circle:</mat-card-title>
+                <!-- <mat-card-subtitle>When origin is (0, 0)</mat-card-subtitle> -->
+                <mat-tab-group (selectedTabChange)="clearCircle($event)">
+                    <mat-tab label="Origin (0, 0)">
+                        <form>
+                            <!-- <div class="origin" id="r">
+                                <span>x<sup>2</sup></span>
+                                <span>+</span>
+                                <span>y<sup>2</sup></span>
+                                <span>=</span>
+                                <span>r<sup>2</sup></span>
+                            </div> -->
+                            <div class="origin">
+                                <span>x<sup>2</sup></span>
+                                <span>+</span>
+                                <span>y<sup>2</sup></span>
+                                <span>=</span>
+                                <div>
+                                    <input placeholder="    r" class="radius" (keyup)="radiusValue($event)" type="number"
+                                        max="10" min="0" #rad>
+                                        <sup>2</sup>
+                                    </div>
+                                    <!-- <span class="max">max radius: 10</span> -->
+                                </div>
+                        </form>
+                    </mat-tab>
+                    <mat-tab label="Origin (h, k)">
+                        <form>
+                            <!-- <div class="origin-hk" id="r-hk">
+                                <span>(x + h)<sup>2</sup></span>
+                                <span>+</span>
+                                <span>(y + k)<sup>2</sup></span>
+                                <span>=</span>
+                                <span>r<sup>2</sup></span>
+                            </div> -->
+                            <div class="origin-hk">
+                                <div>
+                                    <span>(x -
+                                        <input placeholder=" h" class="hk" (keyup)="hValue($event)" type="number"
+                                            max="10" min="0" #hCtrl>
+                                    )</span>
+                                    <sup>2</sup>
+                                </div>
+                                <span>+</span>
+                                <div>
+                                    <span>(y -
+                                        <input placeholder=" k" class="hk" (keyup)="kValue($event)" type="number"
+                                            max="10" min="0" #kCtrl>
+                                    )</span>
+                                    <sup>2</sup>
+                                </div>
+                                <span>=</span>
+                                <div>
+                                    <input placeholder="   r" class="radius-hk" (keyup)="radiusValue($event)" type="number"
+                                        max="10" min="0" #rad1>
+                                    <sup>2</sup>
+                                </div>
+                            </div>
+                        </form>
+                    </mat-tab>
+                </mat-tab-group>
+                <button mat-raised-button color="accent" (click)="createGeo()">Plot Circle</button>
+                <button mat-raised-button class="draw-point " color="accent" (click)="drawPoint()">Plot Random
+                    Point On Circle</button>
+            </div>
+        </mat-card>
+
+
+        <div class="grid-container">
+            <!-- <div class="circle-container">
+                        <div id="circle" [style.width.px]="radius*10" [style.height.px]="radius*10"></div>
+                    </div> -->
+            <canvas #canvas width="600" height="300" class="grid">
+
+            </canvas>
+            <div style="font-size: 13px;">
+                Programmed using Typescript and Canvas API
+            </div>
+        </div>
+    </div> 
+</div>

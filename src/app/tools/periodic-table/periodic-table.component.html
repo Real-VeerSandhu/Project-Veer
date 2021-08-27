@@ -1,0 +1,62 @@
+<app-toolbar></app-toolbar>
+<div class="main-container"  *ngIf="elementSummaryArray.length > 1">
+    <div class="selectors">
+        <div class="mode">
+            <mat-radio-group [(ngModel)]="buildMode" (change)="onChange($event)">
+                <mat-radio-button class="mode-buttons" [value]="false">Explore</mat-radio-button>
+                <mat-radio-button class="mode-buttons" [value]="true">Build</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="configs">
+            <button mat-raised-button (click)="configElement()">Configure Element</button>
+        </div>
+    </div>
+    <div class="p-table">
+        <app-periodic-build [clickedElements]="elementsClickedArray" [elements]="elementSummaryArray" class="build-zone"></app-periodic-build>
+        <ng-container *ngFor="let e of elementSummaryArray | slice: 0:57; let i = index">
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container> 
+
+        </ng-container>
+        <ng-container *ngFor="let e of elementSummaryArray | slice: 71:89; let i = index">
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
+        </ng-container>
+        <ng-container *ngFor="let e of elementSummaryArray | slice: 103:118; let i = index">
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
+        </ng-container>
+    </div>
+
+    <div class="heavy-metals">
+        <ng-container *ngFor="let e of elementSummaryArray | slice: 57:71; let i = index ">
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
+        </ng-container>
+        <ng-container *ngFor="let e of elementSummaryArray | slice: 89:103; let i = index">
+
+            <ng-container *ngTemplateOutlet="elementTemplate; context: {eRef: e}"></ng-container>
+
+        </ng-container>
+    </div>
+</div>
+
+<ng-template #elementTemplate let-e="eRef">
+    <div [style.grid-column]="e.xpos">
+        <div class="element">
+            <div class="number">
+                {{e.number}}
+            </div>
+            <div class="symbol">
+                {{e.symbol}}
+            </div>
+            <div class="name">
+                {{e.name}}
+            </div>
+            <button mat-stroked-button class="element-button" (click)="elementClicked(e.symbol)"></button>
+        </div>
+    </div>
+</ng-template>

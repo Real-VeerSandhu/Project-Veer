@@ -1,0 +1,20 @@
+.navbar {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar a:hover {
+    transition: 100ms;;
+    transform: scale(1.02);
+}
+
+span {
+    padding-right: 1rem;
+    transition: 100ms;;
+
+}
+
+.r {
+    padding-left: 3px;
+}
+

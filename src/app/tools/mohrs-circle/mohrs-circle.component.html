@@ -1,0 +1,50 @@
+<app-toolbar></app-toolbar>
+<div class="main-container">
+    <!-- <p style="padding-left: 10px;">*Fill in all form fields</p> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Normal Stress X (σ<sub>x</sub>)</mat-label>
+        <input matInput type="number" [(ngModel)]="sigmaX">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Normal Stress Y (σ<sub>y</sub>)</mat-label>
+        <input matInput type="number" [(ngModel)]="sigmaY">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Shear Stress XY (𝜏<sub>xy</sub>)</mat-label>
+        <input matInput type="number" [(ngModel)]="tauXY">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Theta (θ)</mat-label>
+        <input matInput type="number" [(ngModel)]="theta" min="-90" max="90">
+    </mat-form-field>
+    <button mat-raised-button (click)="calculate()" (keyup)="calculate()">Calculate</button>
+    <button mat-stroked-button (click)="clear()" style="margin-left: 5px;">
+        <mat-icon>clear</mat-icon>
+    </button>
+    <div class="answer-container">
+        <div>
+            <mat-card class='outputs'>
+                <h3>Maximum Principle Stress (σ<sub class="sPrin">1</sub>): {{sigma1 | number:'1.2-2'}}</h3>
+                <h3>Minimum Principle Stress (σ<sub class="sPrin">2</sub>): {{sigma2 | number:'1.2-2'}}</h3>
+                <hr>
+                <h3>Maximum Shear Stress (𝜏<sub class="tauPrin">max</sub>): {{tauMax | number:'1.2-2'}}</h3>
+                <h3>Maximum Shear Stress (𝜏<sub class="tauPrin">min</sub>): {{tauMin | number:'1.2-2'}}</h3>
+                <hr>
+                <h3>Rotated X Stress (σ<sub class="rotSig">x'</sub>): {{rotatedStressX | number:'1.2-2'}}</h3>
+                <h3>Rotated Y Stress (σ<sub class="rotSig">y'</sub>): {{rotatedStressY | number:'1.2-2'}}</h3>
+                <h3>Rotated Shear Stress (𝜏<sub>x'y'</sub>): {{rotatedStressShear | number:'1.2-2'}}</h3>
+            </mat-card>
+        </div>
+        <div>
+            <canvas #canvas width="600" height="600" class="grid">
+        
+            </canvas>
+            <div style="text-align: start; font-size: 13px;">
+                Programmed using Typescript and Canvas API
+            </div>
+        </div>
+    </div>
+</div>

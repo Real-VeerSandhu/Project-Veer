@@ -1,0 +1,135 @@
+#circle {
+    padding: 20px;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    border-width: 3px;
+    border-style: solid;
+}
+.eq-container {
+    display: grid;
+    /* grid-template-columns: repeat( auto-fill, minmax(400px, 1fr) ); */
+    grid-template-columns: auto;
+    padding: 10px;
+    /* background-color: aqua; */
+    justify-items: center;
+}
+.circle-container {
+    display: grid;
+    width: 500px;
+    padding: 30px;
+}
+.radius {
+    width: 73%;
+}
+#r {
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 13px;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 200px;
+}
+
+
+.origin {
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 70px 150px;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+    font-family: Space Mono, monospace;
+}
+
+.max {
+    color:#3f51b5;
+    text-align: center;
+    display: block;
+}
+.max-hk {
+    color: #3f51b5;
+    display: block;
+    text-align: right;
+    width: 300px;
+}
+
+.origin-hk {
+    display: grid;
+    grid-template-columns: 100px 20px 100px 20px 90px;
+    
+    /* grid-template-columns: 6fr 1fr 6fr 1fr 2fr 8fr; */
+
+    grid-template-rows: auto;
+    /* justify-items: center; */
+    align-items: center;
+    /* width: 280px; */
+    padding-bottom: 10px;
+    font-family: Space Mono, monospace;
+}
+
+#r-hk {
+    display: grid;
+    grid-template-columns: 70px 20px 70px 20px 20px;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    width: 200px;
+}
+                                        
+.radius-hk {
+    width: 30%;
+}
+
+.hk {
+    width: 15%;
+}
+
+
+.draw-point {
+    margin-left: 20px;
+}
+
+.orgin-equation {
+    grid-row: 2;
+}
+
+
+.title {
+    text-align: center;
+}
+
+.grid {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    align-self: center;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    justify-items: center;
+    align-items: flex-start;
+    /* background-color: blueviolet; */
+    grid-row: 2;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+}
+.sub-eq-container {
+    size: x-large;
+}
+.equation-card {
+    width: 100%;
+    max-width: 500px;
+    max-height: 230px;
+    padding: 10px;
+
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

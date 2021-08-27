@@ -1,0 +1,37 @@
+<app-toolbar></app-toolbar>
+<div class="main-container">
+<div class="triangle-container">
+    <img class="triangle-img" src="../../assets/Images/right angle triangle.JPG" width="40%">
+    
+    <div class="right-inputs">
+        <mat-form-field appearance="fill">
+            <mat-label>A</mat-label>
+            <input matInput type="number" [(ngModel)]="A">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>B</mat-label>
+            <input matInput type="number" [(ngModel)]="B">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>C</mat-label>
+            <input matInput type="number" [(ngModel)]="C">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Theta 1</mat-label>
+            <input matInput type="number" [(ngModel)]="theta1">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Theta 2</mat-label>
+            <input matInput type="number" [(ngModel)]="theta2">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Theta 3</mat-label>
+            <input matInput type="number" [(ngModel)]="theta3">
+        </mat-form-field>
+        <button mat-stroked-button class="solve-button" (click)="clear()"><mat-icon>clear</mat-icon></button>
+        <button mat-stroked-button class="clear-button" (click)="findInput()">
+           Solve
+        </button>
+    </div>
+</div>
+</div>

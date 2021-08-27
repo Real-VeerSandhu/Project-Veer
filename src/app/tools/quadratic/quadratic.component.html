@@ -1,0 +1,39 @@
+<app-toolbar></app-toolbar>
+<script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+<div id="calculator" style="width: 600px; height: 400px;"></div>
+<a href="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6">asdfhjkjsdflksf</a>
+<script>
+  var elt = document.getElementById('calculator');
+  var calculator = Desmos.GraphingCalculator(elt);
+  calculator.setExpression({ id: 'graph1', latex: y='x^2' });
+</script>
+
+
+
+<!-- <app-toolbar></app-toolbar>
+<div class="container">
+    <div class="grid">
+        <app-grid #gridComp *ngIf="!showGrid"></app-grid>
+        <app-grid #gridComp [xInput]="xValue" [yInput]="yValue" *ngIf="!!showGrid"></app-grid>
+    </div>
+    <div class="input-container">
+        <mat-card class="main-card">
+            <mat-form-field class="example-form-field">
+                <mat-label>X Value</mat-label>
+                <input matInput type="number" [(ngModel)]="xValue">
+                <button mat-button *ngIf="xValue!==null" matSuffix mat-icon-button aria-label="Clear" (click)="xValue=null">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+              <mat-form-field class="example-form-field">
+                <mat-label>Y Value</mat-label>
+                <input matInput type="number" [(ngModel)]="yValue">
+                <button mat-button *ngIf="yValue!==null" matSuffix mat-icon-button aria-label="Clear" (click)="yValue=null">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+              <button mat-button (click)="plot()">Plot</button>
+        </mat-card>
+    </div>
+</div> -->
