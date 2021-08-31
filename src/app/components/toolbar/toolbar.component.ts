@@ -26,5 +26,4 @@ export class ToolbarComponent implements OnInit {
     this.router.navigate(['/adventures']);
     console.log('adventures fired');
   }
-
 }
