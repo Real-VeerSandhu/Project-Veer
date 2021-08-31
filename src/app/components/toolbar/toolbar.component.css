@@ -3,10 +3,6 @@
     width: 100%;
 }
 
-.navbar a:hover {
-    transition: 100ms;;
-    transform: scale(1.02);
-}
 
 span {
     padding-right: 1rem;

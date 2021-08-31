@@ -1,11 +1,104 @@
+.custom-shape-divider-top-1630446096 {
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1630446096 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 172px;
+}
+
+.custom-shape-divider-top-1630446096 .shape-fill {
+  fill: #36469C;
+  /* fill: #3F51B5; */
+}
+
 .main-container {
-  padding-left: 100px;
+  width: 100%;
+  height: 100vh;
+  padding-top: 0%;
+  vertical-align: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.header-section {
+  /* background-color: #303030; */
+  color: #36469C;
+  color: white;
+  color: black;
+  padding-top: 5%;
+  height: 30%;
+}
+
+.title {
+  /* color: orange; */
+  overflow: hidden;
+  font-size: 100px;
+  padding-top: 90px;
+  margin: 0;
+}
+
+.subtitle {
+  /* color: brown; */
+  overflow: hidden;
+  font-size: 30px;
+}
+
+.cards-section {
+  /* background-color: seagreen; */
+  text-align: left;
+  height: 50%;
+  margin: 1%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.me {
+  border-style: solid;
+  border-width: 1px;
+  justify-self: center;
+  transition: 80ms;
+  margin: 1%;
+  width: 80%;
+  height: 60%;
+}
+
+.me:hover {
+  transform: scale(1.03);
+  transition: transform 80ms;
+}
+
+.me-image {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Circle_-_black_simple.svg/2048px-Circle_-_black_simple.svg.png');
+  background-size: cover;
+  border-width: 2px;
+  border-style: bold;
+  border-color: black;
+}
+
+.e-link {
+  margin: 10px;
+}
+
+
+/* .main-container {
+  width: 100%;
+  padding-top: 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  width: 80vw;
   vertical-align: center;
-}
+  background-color: red;
+} */
+
 
 .veer-card {
     transition: 200ms;
@@ -48,7 +141,7 @@
   padding: 0%;
   padding-left: 5px;
   padding-right: 5px;
-  margin: 1%;
+  margin: 3%;
 }
 
 #title {
@@ -62,4 +155,5 @@
   border-radius: 20px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
+
 
