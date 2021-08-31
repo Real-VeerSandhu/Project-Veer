@@ -13,4 +13,3 @@ export function compoundData() {
     };
     return compounds;
 }
-

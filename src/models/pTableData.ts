@@ -1,5 +1,5 @@
 export function pTableData() {
-    return pTable;
+    return pTable; 
 }
 const pTable = {
     "elements": [
