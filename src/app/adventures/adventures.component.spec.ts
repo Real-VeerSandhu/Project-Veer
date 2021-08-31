@@ -22,4 +22,4 @@ describe('AdventuresComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+}); 

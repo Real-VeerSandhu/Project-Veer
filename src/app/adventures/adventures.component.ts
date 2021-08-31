@@ -13,6 +13,6 @@ export class AdventuresComponent implements OnInit {
   }
 
   goToAirline() {
-    console.log("FBLA Airline")
+    console.log("N/A")
   }
 }
