@@ -27,7 +27,6 @@ export class BinaryMaskDirective {
   }
 }
 
-
 // constructor(public model: NgControl) { }
 
 //   onInputChange(value: string) {
