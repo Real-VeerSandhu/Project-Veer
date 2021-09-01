@@ -20,5 +20,8 @@ export class HomeComponent implements OnInit {
   goToAdventures() {
     this.router.navigate(['/adventures']);
   }
+  goToTable() {
+    this.router.navigate(['/tools/periodic-table']);
+  }
 
 }

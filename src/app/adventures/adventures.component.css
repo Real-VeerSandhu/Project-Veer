@@ -11,9 +11,12 @@
 }
 
 .target {
+    justify-self: center;
+    align-self: center;
     transition: 200ms;
-    text-align: center;
-    justify-items: center;
+    flex: 1 0 21%;
+    margin: auto;
+    margin: 2%;
 }
 
 .target:hover {
@@ -22,22 +25,29 @@
 }
 
 .adventure-buttons {
+    align-items: center;
+    justify-items: center;
+    align-self: end;
     width: auto;
     height: auto;
-    margin: 20%;
-    margin: auto;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .adventure-buttons a {
     margin: auto;
+    align-self: center;
 }
 
 .adventure-buttons button {
+    align-self: center;
+    justify-self: center;
 
     cursor: pointer;
     text-align: center;
   
-    width: 350px;
+    width: 80%;
     height: 150px;
     line-height: 100px;
   

@@ -58,44 +58,64 @@
       </mat-card-actions>
     </mat-card>
 
+    
     <mat-card class="me">
       <mat-card-header>
-        <div mat-card-avatar class="me-image"></div>
-        <mat-card-title>Veer Sandhu</mat-card-title>
-        <mat-card-subtitle>Web App Developer | Data Scientist | ML Engineer</mat-card-subtitle>
+        <div mat-card-avatar class="work-image"></div>
+        <mat-card-title>Organization Involvement</mat-card-title>
+        <mat-card-subtitle>My Experiences</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>
-          Lorem 
-        </p>
+        <ul>
+          <li><b>Science For All Audiences:</b> Data Science Intern</li>
+          <li><b>Canada Learning Code:</b> Ambassadoor and Mentor</li>
+          <li><b>Community AI:</b> Teaching Assistant</li>
+          <li><b>Ontario Engineering Society:</b> Content Developer</li>
+          <li><b>Project Tech Conferences:</b> Coding Challenge Coordinator</li>
+          <li><b>Hack Club:</b> Member</li>
+          <li><b>Kaggle:</b> Code and Dataset Contributor</li>
+        </ul>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Github</button>
-        <button mat-button>Linkedin</button>
-        <button mat-button>Devpost</button>
-        <button mat-button>Youtube</button>
+        <a href="https://www.canadalearningcode.ca/" rel="noopener" target="_blank" class="work-link">
+          <button mat-stroked-button color="secondary">CLC</button>
+        </a>
+        <a href="https://www.thecommunityai.org/" rel="noopener" target="_blank" class="work-link">
+          <button mat-stroked-button color="secondary">Community AI</button>
+        </a>
+        <a href="https://www.projecttechconferences.com/" rel="noopener" target="_blank" class="work-link"> 
+          <button mat-stroked-button color="secondary">PTC</button>
+        </a>
+        <a href="https://www.kaggle.com/" rel="noopener" target="_blank" class="work-link">
+          <button mat-stroked-button color="secondary">Kaggle</button>
+        </a>
       </mat-card-actions>
     </mat-card>
-
     <mat-card class="me">
       <mat-card-header>
-        <div mat-card-avatar class="overview-image"></div>
-        <mat-card-title>Veer Sandhu</mat-card-title>
-        <mat-card-subtitle>Web App Developer | Data Scientist | ML Engineer</mat-card-subtitle>
+        <div mat-card-avatar class="nav-image"></div>
+        <mat-card-title>Navigation Guide</mat-card-title>
+        <mat-card-subtitle>Section Overview (Where to Look)</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <p>
-          Lorem
-        </p>
+        <ul>
+          <li><b>Home:</b> Landing Page. Contains all my information and social links (you're here now)</li>
+          <li><b>Tools:</b> Interactive Playground. Contains my custom built education tools that define my academics and educational process</li>
+          <li><b>Adventures:</b> Other Explorations. Contains contains my tech projects centered around AI, ML, Data Science, and Programming Competitions</li>
+        </ul>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Github</button>
-        <button mat-button>Linkedin</button>
-        <button mat-button>Devpost</button>
-        <button mat-button>Youtube</button>
+        <a rel="noopener" target="_blank" class="page-link">
+          <button mat-stroked-button color="secondary" (click)="goToTools()">Tools</button>
+        </a>
+        <a rel="noopener" target="_blank" class="page-link">
+          <button mat-stroked-button color="secondary" (click)="goToAdventures()">Adventures</button>
+        </a>
+        <a rel="noopener" target="_blank" class="page-link"> 
+          <button mat-stroked-button color="secondary" (click)="goToTable()">Interactive Periodic Table</button>
+        </a>
       </mat-card-actions>
     </mat-card>
-
   </div>
   <!-- <div>
     <mat-card class="information-card">
