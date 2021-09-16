@@ -25,17 +25,24 @@
   padding-top: 0%;
   vertical-align: center;
   text-align: center;
-  background-color: rgb(255, 255, 255);
 }
 
 .header-section {
-  /* background-color: #303030; */
+  background-color: rgb(255, 255, 255);
   color: #36469C;
-  color: white;
-  color: black;
-  padding-top: 5%;
+  /* color: white; */
+  /* color: black; */
+  padding-top: 100px;
   padding-bottom: 1%;
   height: 30%;
+}
+
+.project-veer {
+  font-family: monospace; 
+  color: rgb(255, 255, 255);
+  padding: 10px; 
+  background-color: rgb(32,33,36); 
+  border-radius: 10px;
 }
 
 .title {
@@ -49,6 +56,7 @@
 .subtitle {
   /* color: brown; */
   overflow: hidden;
+  padding: 1%;
   font-size: 30px;
 }
 
@@ -64,16 +72,17 @@
 
 .me {
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   justify-self: center;
   transition: 80ms;
-  margin: 1%;
-  width: 80%;
-  height: 60%;
+  margin: 10px;
+  width: 500px;
+  height: 250px;
+  filter: drop-shadow(8px 8px 8px black);
 }
 
 .me:hover {
-  transform: scale(1.03);
+  transform: scale(1.2);
   transition: transform 80ms;
 }
 
@@ -86,7 +95,7 @@
 }
 
 .e-link {
-  margin: 10px;
+  margin: 1%;
 }
 
 .nav-image {
@@ -98,7 +107,7 @@
 }
 
 .page-link {
-  margin: 10px;
+  margin: 1%;
   color: red;
 }
 
