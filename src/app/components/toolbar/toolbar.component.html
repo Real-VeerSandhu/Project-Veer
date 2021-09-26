@@ -1,19 +1,25 @@
 <mat-toolbar color="primary" class="navbar">
     <!-- <div>Project <img src="assets/Images/v-logo.png" width="20px" height="20px"></div> -->
-    <div><a mat-button (click)="goToHome()">
-        <span id='Landing'>Project-Veer</span>
-    </a></div>
     <div>
-        <a mat-button (click)="goToHome()">
-            <span id="Home">Home</span>
-        </a>
-
-        <a mat-button (click)="goToTools()">
-            <span>Tools</span>
-        </a>
-
-        <a mat-button (click)="goToAdventures()">
-            <span>Adventures</span>
-        </a>
+        <button mat-stroked-button class="link" id='Landing'>Project-Veer</button>
+    </div>
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <button mat-menu-item class="item" (click)="goToHome()">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+            <button mat-menu-item class="item" (click)="goToTools()">
+                <mat-icon>build</mat-icon>
+                <span>Tools</span>
+            </button>
+            <button mat-menu-item class="item" (click)="goToAdventures()">
+                <mat-icon>bubble_chart</mat-icon>
+                <span>Adventures</span>
+            </button>
+          </mat-menu>
     </div>
 </mat-toolbar>

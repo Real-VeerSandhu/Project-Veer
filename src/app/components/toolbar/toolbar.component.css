@@ -1,14 +1,24 @@
 .navbar {
+    margin: 0px;
     justify-content: space-between;
     width: 100%;
+    background-image: linear-gradient(to right, purple,blue,purple);
+    background-image: white;
+    
 }
 
-
+/* 
 span {
+    text-align: center;
+    justify-items: start;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 0px;
+    color: white;
     padding-right: 1rem;
     transition: 100ms;;
-
-}
+} */
 
 .r {
     padding-left: 3px;
@@ -17,4 +27,11 @@ span {
 #Landing {
     text-align: center;
     font-size: 19px;
+}
+
+.link {
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    margin: 12px;
 }
