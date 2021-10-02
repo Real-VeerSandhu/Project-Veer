@@ -11,6 +11,8 @@ export class ToolbarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  showFiller = false;
+
   ngOnInit() {
   }
 

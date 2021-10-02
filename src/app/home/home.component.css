@@ -1,4 +1,4 @@
-.custom-shape-divider-top-1630446096 {
+/* /* .custom-shape-divider-top-1630446096 {
   position: absolute;
   top: 1;
   left: 0;
@@ -16,7 +16,6 @@
 
 .custom-shape-divider-top-1630446096 .shape-fill {
   fill: #36469C;
-  /* fill: #3F51B5; */
 }
 
 .main-container {
@@ -30,8 +29,6 @@
 .header-section {
   background-color: rgb(255, 255, 255);
   color: #36469C;
-  /* color: white; */
-  /* color: black; */
   padding-top: 100px;
   padding-bottom: 1%;
   height: 30%;
@@ -46,7 +43,6 @@
 }
 
 .title {
-  /* color: orange; */
   overflow: hidden;
   font-size: 100px;
   padding-top: 90px;
@@ -54,14 +50,12 @@
 }
 
 .subtitle {
-  /* color: brown; */
   overflow: hidden;
   padding: 1%;
   font-size: 30px;
 }
 
 .cards-section {
-  /* background-color: seagreen; */
   text-align: left;
   height: 50%;
   margin: 1%;
@@ -124,15 +118,6 @@
   color: purple;
 }
 
-/* .main-container {
-  width: 100%;
-  padding-top: 7%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  vertical-align: center;
-  background-color: red;
-} */
 
 
 .veer-card {
@@ -189,6 +174,98 @@
   margin: 30px;
   border-radius: 20px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+} */
+
+
+/* .main {
+  font-family: 'Lato', sans-serif;
+} */
+@keyframes slidein1 {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+.heading-cont {
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  border-bottom: 0.1vh solid black;
+  padding-bottom: 3%;
+}
+
+.first {
+  font-style: italic;
+  text-align: center;
+  font-weight: 100;
+  font-size: 3vw;
+  animation-duration: 1.5s;
+  animation-name: slidein1, move;
+  animation-iteration-count: 1;
 }
 
 
+.second {
+  text-align: center;
+  font-weight: 500;
+  font-size: 5vw;
+  animation-duration: 2.5s;
+  animation-name: slidein1;
+  animation-iteration-count: 1;
+}
+
+.third {
+  text-align: center;
+  font-weight: 500;
+  font-size: 3vw;
+  font-family: sans-serif;
+  opacity: unset;
+  animation-duration: 3.5s;
+  animation-name: slidein1;
+  animation-iteration-count: 1;
+}
+
+.text-cont {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  font-size: 2vw;
+  animation-duration: 3s;
+  animation-name: move1;
+  animation-iteration-count: 1;
+}
+
+.bio {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  transition: opacity 250ms ease-in;
+}
+
+.bio.appear {
+  background-color: turquoise;
+}
+
+/* mat-grid-tile {
+  background: lightblue;
+} */

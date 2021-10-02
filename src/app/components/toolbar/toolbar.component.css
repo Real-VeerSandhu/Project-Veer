@@ -2,9 +2,8 @@
     margin: 0px;
     justify-content: space-between;
     width: 100%;
-    background-image: linear-gradient(to right, purple,blue,purple);
-    background-image: white;
-    
+    /* background-image: linear-gradient(to right, rgb(183, 0, 255),rgb(49, 49, 255)); */
+    background-color: #0024F1;
 }
 
 /* 
@@ -35,3 +34,4 @@ span {
     border-width: 2px;
     margin: 12px;
 }
+
