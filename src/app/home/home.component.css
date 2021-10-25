@@ -281,6 +281,20 @@
   transition: opacity 4050ms ease-in;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects button {
+  align-self: center;
+  margin: 1%;
+  font-size: 2vw;
+  padding: 1%;
+  width: 30%;
+  height: 89%;
+}
+
 .bio.appear {
   background-color: turquoise;
 }
@@ -342,5 +356,12 @@
     margin-left: 3%;
     padding-bottom: 0%;
     text-decoration: underline;
+  }
+  .projects button {
+    align-self: center;
+    margin: 1%;
+    font-size: 3vw;
+    width: 50%;
+    height: 89%;
   }
 }

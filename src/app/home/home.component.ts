@@ -36,4 +36,8 @@ export class HomeComponent implements OnInit {
   linkedin() {
     window.open('https://www.linkedin.com/in/veer-sandhu');
   }
+
+  project(value) {
+    console.log(value)
+  }
 }
