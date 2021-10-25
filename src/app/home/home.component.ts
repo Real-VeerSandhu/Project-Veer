@@ -24,4 +24,16 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/tools/periodic-table']);
   }
 
+  github() {
+    window.open('https://github.com/Real-VeerSandhu');
+  }
+  youtube() {
+    window.open('https://www.youtube.com/channel/UCZpL_cCZfkilh7ITC_qUigw');
+  }
+  devpost() {
+    window.open('https://devpost.com/Real-VeerSandhu?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav');
+  }
+  linkedin() {
+    window.open('https://www.linkedin.com/in/veer-sandhu');
+  }
 }

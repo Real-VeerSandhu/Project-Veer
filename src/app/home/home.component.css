@@ -207,8 +207,28 @@
   align-items: center;
   justify-items: center;
   width: 100%;
+  /* border-bottom: 0.1vh solid black; */
+  padding-bottom: 0.5%;
+}
+
+.links {
+  display: flex; 
+  flex-direction: row; 
+  width: 100%; 
+  align-content: center; 
+  justify-content: center; 
+  padding: 1vh;
+  animation-duration: 3s;
+  animation-name: move1;
+  animation-iteration-count: 1;
   border-bottom: 0.1vh solid black;
-  padding-bottom: 3%;
+}
+
+.links button {
+  border-style: none;
+  font-size: 1vw;
+  margin-left: 3%;
+  text-decoration: underline;
 }
 
 .first {
@@ -220,7 +240,6 @@
   animation-name: slidein1, move;
   animation-iteration-count: 1;
 }
-
 
 .second {
   text-align: center;
@@ -264,4 +283,64 @@
 
 .bio.appear {
   background-color: turquoise;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+     margin: 0;
+     padding: 0;
+  }
+  .sample {
+     width: 100%;
+  }
+  /* .text-cont {
+    background-color: aqua;
+  } */
+  .first {
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+    font-size: 5vw;
+    animation-duration: 1.5s;
+    animation-name: slidein1, move;
+    animation-iteration-count: 1;
+  }
+  
+  .second {
+    text-align: center;
+    font-weight: 500;
+    font-size: 7vw;
+    animation-duration: 2.5s;
+    animation-name: slidein1;
+    animation-iteration-count: 1;
+  }
+  
+  .third {
+    text-align: center;
+    font-weight: 500;
+    font-size: 4.5vw;
+    font-family: sans-serif;
+    opacity: unset;
+    animation-duration: 3.5s;
+    animation-name: slidein1;
+    animation-iteration-count: 1;
+  }
+  
+  .text-cont {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    font-size: 3vw;
+    animation-duration: 3s;
+    animation-name: move1;
+    animation-iteration-count: 1;
+  }
+  .links button {
+    border-style: none;
+    font-size: 3vw;
+    margin-left: 3%;
+    padding-bottom: 0%;
+    text-decoration: underline;
+  }
 }
