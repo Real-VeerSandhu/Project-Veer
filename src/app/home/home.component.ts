@@ -38,6 +38,15 @@ export class HomeComponent implements OnInit {
   }
 
   project(value) {
-    console.log(value)
+    let links = {
+      1: 'https://github.com/Real-VeerSandhu/Article-AI',
+      2: 'https://github.com/Real-VeerSandhu/SCIFAA-COVID-19-Project',
+      3: 'https://github.com/Real-VeerSandhu/CIFAR-Image-Classification',
+      4: 'https://github.com/Real-VeerSandhu/Waste-Classification',
+      5: 'https://github.com/getgrowify/ML-App',
+      6: 'https://github.com/corex-peddie/machine-learning',
+      7: 'https://github.com/Real-VeerSandhu/Spike-Sigma',
+    }
+  window.open(links[value])
   }
 }
