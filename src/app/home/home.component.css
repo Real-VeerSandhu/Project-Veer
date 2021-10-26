@@ -249,7 +249,7 @@
   text-align: center;
   font-weight: 500;
   font-size: 5vw;
-  animation-duration: 3.5s;
+  animation-duration: 2.5s;
   animation-name: slidein1;
   animation-iteration-count: 1;
 }
@@ -259,7 +259,7 @@
   font-weight: 500;
   font-size: 3vw;
   font-family: sans-serif;
-  animation-duration: 4.5s;
+  animation-duration: 3.5s;
   animation-name: slidein1;
   animation-iteration-count: 1;
 }
@@ -270,7 +270,7 @@
   text-align: center;
   width: 100%;
   font-size: 2vw;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-name: move1;
   animation-iteration-count: 1;
 }
@@ -287,6 +287,7 @@
 .projects {
   display: flex;
   flex-direction: column;
+  padding-bottom: 3%;
 }
 
 .projects button {
@@ -327,7 +328,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 7vw;
-    animation-duration: 3.5s;
+    animation-duration: 2.5s;
     animation-name: slidein1;
     animation-iteration-count: 1;
   }
@@ -338,9 +339,17 @@
     font-size: 4.5vw;
     font-family: sans-serif;
     opacity: unset;
-    animation-duration: 4.5s;
+    animation-duration: 3.5s;
     animation-name: slidein1;
     animation-iteration-count: 1;
+  }
+  .bio {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    transition: opacity 4050ms ease-in;
   }
   
   .text-cont {
@@ -349,7 +358,7 @@
     text-align: center;
     width: 100%;
     font-size: 3vw;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-name: move1;
     animation-iteration-count: 1;
   }
