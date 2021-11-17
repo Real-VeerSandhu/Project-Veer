@@ -36,6 +36,16 @@
 }
 
 .tool-buttons {
+    flex-direction: column;
+    display: flex;
+}
+
+.tool-buttons button {
+    align-self: center;
+    justify-self: center;
+}
+
+/* .tool-buttons {
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 3;
@@ -47,7 +57,7 @@
     align-self: center;
     grid-row: 1;
     grid-column: 3;
-}
+} */
 
 .animate-button {
     transition: 200ms;

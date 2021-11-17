@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   goToTools() {
     this.router.navigate(['/tools']);
+    console.log('Tools')
   }
   goToAdventures() {
     this.router.navigate(['/adventures']);
@@ -39,6 +40,7 @@ export class HomeComponent implements OnInit {
 
   project(value) {
     let links = {
+      0: 'https://github.com/Real-VeerSandhu/Object-Detection',
       1: 'https://github.com/Real-VeerSandhu/Article-AI',
       2: 'https://github.com/Real-VeerSandhu/SCIFAA-COVID-19-Project',
       3: 'https://github.com/Real-VeerSandhu/CIFAR-Image-Classification',

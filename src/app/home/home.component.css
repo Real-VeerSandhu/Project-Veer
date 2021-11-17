@@ -239,7 +239,7 @@
   font-style: italic;
   text-align: center;
   font-weight: 100;
-  font-size: 3vw;
+  font-size: 2vw;
   animation-duration: 1.5s;
   animation-name: slidein1, move;
   animation-iteration-count: 1;
@@ -248,7 +248,7 @@
 .second {
   text-align: center;
   font-weight: 500;
-  font-size: 5vw;
+  font-size: 4vw;
   animation-duration: 2.5s;
   animation-name: slidein1;
   animation-iteration-count: 1;
@@ -269,10 +269,11 @@
   align-self: center;
   text-align: center;
   width: 100%;
-  font-size: 2vw;
+  font-size: 1.5vw;
   animation-duration: 3s;
   animation-name: move1;
   animation-iteration-count: 1;
+  padding-bottom: 5%;
 }
 
 .bio {
@@ -294,6 +295,7 @@
   align-self: center;
   margin: 1%;
   font-size: 2vw;
+  font-weight: 400;
   padding: 1%;
   width: 30%;
   height: 89%;

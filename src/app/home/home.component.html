@@ -1,7 +1,9 @@
 <app-toolbar></app-toolbar>
 
 <div class="main">
-  <img src="/assets/Images/header2.png" alt="Header" width="100%" height="10%" style="width: 100%;">
+  <div style="width: 100%;">
+    <img src="/assets/Images/waves_final.svg" alt="Header" width="100%" height="10%" style="object-fit: fill;">
+  </div>
   <div class="heading-cont">
     <div class="first">Greetings!</div>
     <div class="second">I'm Veer Sandhu</div>
@@ -15,14 +17,13 @@
     <!-- Place this tag where you want the button to render. -->
   </div>
   <div class="text-cont">
-      <h2 style="font-style: italic; font-weight: 220;">Abstract</h2>
-      <p class="bio">Hi there! I'm Veer, an IB student at Turner Fenton Secondary School. 
-        I'm an ambitious individual that uses Statistical Concepts and Computer Science to solve real-world problems and build innovating projects. 
-        Through my development of fundamental skills, academic mastery, and practical experiences, I'm able to bring a cutting edge repertoire to any endeavor or involvement.  
-      </p>
+      <h2 style="font-style: bold; font-weight: 280;">Abstract</h2>
+      <p class='bio'>Hi there! I'm Veer, an IB student at Turner Fenton Secondary School. I use Statistical Concepts and Computer Science to solve real-world problems through innovative project development. My technical repertoire includes Artificial Intelligence, Machine Learning, Data Science, IoT, and App Development. </p>   
+      <p class="bio">You can find me building data driven applications, constructing powerful AI algorithms, engineering ML pipelines, and making an impact through technology. I currently work with organizations including Canada Learning Code, Community AI, Project Tech Conferences, Inspirit AI, and SCI FAA. My most recent venture can be found <a href="https://github.com/Real-VeerSandhu/Object-Detection">here</a> and I can be contacted at: <a href="mailto:sandhu.s.veer@gmail.com">sandhu.s.veer@gmail.com</a>.</p>
 
-      <h2 style="font-style: italic; font-weight: 100;">Projects</h2>
+      <h2 style="font-style: bold; font-weight: 300;">Projects</h2>
       <div class="projects">
+          <button mat-stroked-button (click)="project(0)">Object Detection</button>
           <button mat-stroked-button (click)="project(1)">Article AI</button>
           <button mat-stroked-button (click)="project(2)">COVID-19 Analysis</button>
           <button mat-stroked-button (click)="project(3)">CIFAR-Image-Classification</button>
@@ -31,6 +32,8 @@
           <button mat-stroked-button (click)="project(6)">CoreX ML App</button>
           <button mat-stroked-button (click)="project(7)">Spike Sigma</button>
       </div>
+      <h2 style="font-style: bold; font-weight: 300;">Tools</h2>
+      <p class='bio'>This web app also hosts the interactive academic tools I've built through my IB education. They can be accessed via the menu or through <button mat-stroked-button style="font-size: 100%; font-weight: 400;" (click)="goToTools()">this button</button> </p>
     </div>
 </div>
 
