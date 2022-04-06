@@ -299,6 +299,12 @@
   padding: 1%;
   width: 30%;
   height: 89%;
+  transition: 140ms;
+}
+
+.projects button:hover {
+  transform: scale(1.1);
+  transition: transform 80ms;
 }
 
 .bio.appear {
@@ -374,5 +380,9 @@
     font-size: 3vw;
     width: 50%;
     height: 89%;
+  }
+  .projects button:hover {
+    transform: scale(1);
+    transition: 1ms;
   }
 }

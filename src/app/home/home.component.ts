@@ -38,6 +38,10 @@ export class HomeComponent implements OnInit {
     window.open('https://www.linkedin.com/in/veer-sandhu');
   }
 
+  resume() {
+    console.log('test');
+  }
+
   project(value) {
     let links = {
       0: 'https://github.com/Real-VeerSandhu/Object-Detection',
@@ -48,6 +52,7 @@ export class HomeComponent implements OnInit {
       5: 'https://github.com/getgrowify/ML-App',
       6: 'https://github.com/corex-peddie/machine-learning',
       7: 'https://github.com/Real-VeerSandhu/Spike-Sigma',
+      9: 'https://github.com/Real-VeerSandhu/Lockester'
     }
   window.open(links[value])
   }
