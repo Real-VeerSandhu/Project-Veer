@@ -213,6 +213,7 @@
   width: 100%;
   /* border-bottom: 0.1vh solid black; */
   padding-bottom: 0.5%;
+  padding-top: 2%;
 }
 
 .links {
@@ -222,7 +223,7 @@
   align-content: center; 
   justify-content: center; 
   padding-bottom: 1vh;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   animation-name: move1;
   animation-iteration-count: 1;
   border-bottom: 0.1vh solid black;
@@ -240,26 +241,25 @@
   text-align: center;
   font-weight: 100;
   font-size: 2vw;
-  animation-duration: 1.5s;
-  animation-name: slidein1, move;
+  animation-duration: 1.0s;
+  animation-name: slidein1;
   animation-iteration-count: 1;
 }
 
 .second {
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 4vw;
-  animation-duration: 2.5s;
+  animation-duration: 2.0s;
   animation-name: slidein1;
   animation-iteration-count: 1;
 }
 
 .third {
   text-align: center;
-  font-weight: 500;
+  font-weight: 80;
   font-size: 3vw;
-  font-family: sans-serif;
-  animation-duration: 3.5s;
+  animation-duration: 2.0s;
   animation-name: slidein1;
   animation-iteration-count: 1;
 }
@@ -270,7 +270,8 @@
   text-align: center;
   width: 100%;
   font-size: 1.5vw;
-  animation-duration: 3s;
+
+  animation-duration: 2.5s;
   animation-name: move1;
   animation-iteration-count: 1;
   padding-bottom: 5%;
@@ -319,12 +320,12 @@
   .sample {
      width: 100%;
   }
-  .first {
+  /* .first {
     font-style: italic;
     text-align: center;
     font-weight: 100;
     font-size: 5vw;
-    animation-duration: 1.5s;
+    animation-duration: 1.0s;
     animation-name: slidein1, move;
     animation-iteration-count: 1;
   }
@@ -347,7 +348,35 @@
     animation-duration: 3.5s;
     animation-name: slidein1;
     animation-iteration-count: 1;
+  } */
+  .first {
+    font-style: italic;
+    text-align: center;
+    font-weight: 100;
+    font-size: 5vw;
+    animation-duration: 1.0s;
+    animation-name: slidein1;
+    animation-iteration-count: 1;
   }
+  
+  .second {
+    text-align: center;
+    font-weight: 400;
+    font-size: 7vw;
+    animation-duration: 2.5s;
+    animation-name: slidein1;
+    animation-iteration-count: 1;
+  }
+  
+  .third {
+    text-align: center;
+    font-weight: 80;
+    font-size: 4.5vw;
+    animation-duration: 2.5s;
+    animation-name: slidein1;
+    animation-iteration-count: 1;
+  }
+
   .bio {
     align-self: center;
     justify-self: center;
