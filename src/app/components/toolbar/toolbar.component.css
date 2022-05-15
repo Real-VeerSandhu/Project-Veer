@@ -4,6 +4,10 @@
     width: 100%;
     /* background-image: linear-gradient(to right, rgb(183, 0, 255),rgb(49, 49, 255)); */
     background-color: #0024F1;
+    /* background-color: #31333F; */
+
+    /* background-color: #31333F; */
+    /* border-bottom: 2px solid white; */
 }
 
 /* 
@@ -26,11 +30,12 @@ span {
 #Landing {
     text-align: center;
     font-size: 19px;
+    color: rgb(255, 255, 255);
 }
 
 .link {
     border-radius: 10px;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     border-width: 2px;
     margin: 12px;
 }
