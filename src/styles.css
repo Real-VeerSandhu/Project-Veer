@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
