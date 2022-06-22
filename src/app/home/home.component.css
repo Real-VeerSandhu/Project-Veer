@@ -207,8 +207,8 @@
     align-self: center;
     justify-self: center;
     text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
     transition: opacity 4050ms ease-in;
   }
   
@@ -217,7 +217,7 @@
     align-self: center;
     text-align: center;
     width: 100%;
-    font-size: 3vw;
+    font-size: 4vw;
     animation-duration: 3s;
     animation-name: move1;
     animation-iteration-count: 1;
@@ -228,12 +228,13 @@
     margin-left: 3%;
     padding-bottom: 0%;
     text-decoration: underline;
+    text-decoration-color: #0024F1;
     
   }
   .projects button {
     align-self: center;
     margin: 1%;
-    font-size: 3vw;
+    font-size: 4vw;
     width: 50%;
     height: 89%;
   }
