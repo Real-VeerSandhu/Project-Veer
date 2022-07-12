@@ -52,7 +52,8 @@ export class HomeComponent implements OnInit {
       5: 'https://github.com/getgrowify/ML-App',
       6: 'https://github.com/corex-peddie/machine-learning',
       7: 'https://github.com/Real-VeerSandhu/Spike-Sigma',
-      9: 'https://github.com/Real-VeerSandhu/Lockester'
+      9: 'https://github.com/Real-VeerSandhu/Lockester',
+      10: 'https://github.com/Real-VeerSandhu/Ethnicity-Age-Prediction'
     }
   window.open(links[value])
   }
