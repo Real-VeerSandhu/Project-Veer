@@ -53,7 +53,8 @@ export class HomeComponent implements OnInit {
       6: 'https://github.com/corex-peddie/machine-learning',
       7: 'https://github.com/Real-VeerSandhu/Spike-Sigma',
       9: 'https://github.com/Real-VeerSandhu/Lockester',
-      10: 'https://github.com/Real-VeerSandhu/Ethnicity-Age-Prediction'
+      10: 'https://github.com/Real-VeerSandhu/Ethnicity-Age-Prediction',
+      11: 'https://github.com/Real-VeerSandhu/Covid-Info-App'
     }
   window.open(links[value])
   }
